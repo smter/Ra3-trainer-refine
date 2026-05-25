@@ -1,0 +1,13 @@
+/Trainer.exe
+/.codex/
+/artifacts/
+/analysis/
+/tools/
+/tests/test_parse_trainer.py
+/code.txt
+**/bin/
+**/obj/
+**/__pycache__/
+*.pyc
+/.pytest_cache/
+/*.png

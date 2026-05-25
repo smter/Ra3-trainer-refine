@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <DebugType Condition="'$(Configuration)' == 'Release'">none</DebugType>
+    <DebugSymbols Condition="'$(Configuration)' == 'Release'">false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Iced" Version="1.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\code.txt" />
+    <EmbeddedResource Include="Assets\trainer_report.json" LogicalName="Ra3Trainer.Core.Assets.trainer_report.json" />
+    <EmbeddedResource Include="Assets\00_bootstrap.aa" LogicalName="Ra3Trainer.Core.Assets.00_bootstrap.aa" />
+  </ItemGroup>
+</Project>

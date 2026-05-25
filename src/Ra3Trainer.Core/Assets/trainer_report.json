@@ -1,0 +1,3119 @@
+{
+  "file": {
+    "path": "Trainer.exe",
+    "size": 1422021,
+    "sha256": "5DDD338EC638E01F82454859DB6629D57AF4123176C88BE7CB33ADAD3B57E7E9"
+  },
+  "imports": [
+    {
+      "dll": "advapi32.dll",
+      "count": 6,
+      "functions": [
+        "AdjustTokenPrivileges",
+        "LookupPrivilegeValueA",
+        "OpenProcessToken",
+        "RegCloseKey",
+        "RegOpenKeyExA",
+        "RegQueryValueExA"
+      ]
+    },
+    {
+      "dll": "comctl32.dll",
+      "count": 22,
+      "functions": [
+        "ImageList_Add",
+        "ImageList_BeginDrag",
+        "ImageList_Create",
+        "ImageList_Destroy",
+        "ImageList_DragEnter",
+        "ImageList_DragLeave",
+        "ImageList_DragMove",
+        "ImageList_DragShowNolock",
+        "ImageList_Draw",
+        "ImageList_DrawEx",
+        "ImageList_EndDrag",
+        "ImageList_GetBkColor",
+        "ImageList_GetDragImage",
+        "ImageList_GetIconSize",
+        "ImageList_GetImageCount",
+        "ImageList_Read",
+        "ImageList_Remove",
+        "ImageList_ReplaceIcon",
+        "ImageList_SetBkColor",
+        "ImageList_SetDragCursorImage",
+        "ImageList_SetIconSize",
+        "ImageList_Write"
+      ]
+    },
+    {
+      "dll": "comdlg32.dll",
+      "count": 1,
+      "functions": [
+        "GetOpenFileNameA"
+      ]
+    },
+    {
+      "dll": "gdi32.dll",
+      "count": 66,
+      "functions": [
+        "BitBlt",
+        "CopyEnhMetaFileA",
+        "CreateBitmap",
+        "CreateBrushIndirect",
+        "CreateCompatibleBitmap",
+        "CreateCompatibleDC",
+        "CreateDIBSection",
+        "CreateDIBitmap",
+        "CreateFontIndirectA",
+        "CreateHalftonePalette",
+        "CreatePalette",
+        "CreatePenIndirect",
+        "CreateSolidBrush",
+        "DeleteDC",
+        "DeleteEnhMetaFile",
+        "DeleteObject",
+        "ExcludeClipRect",
+        "GetBitmapBits",
+        "GetBrushOrgEx",
+        "GetClipBox",
+        "GetCurrentPositionEx",
+        "GetDCOrgEx",
+        "GetDIBColorTable",
+        "GetDIBits",
+        "GetDeviceCaps",
+        "GetEnhMetaFileBits",
+        "GetEnhMetaFileHeader",
+        "GetEnhMetaFilePaletteEntries",
+        "GetObjectA",
+        "GetPaletteEntries",
+        "GetPixel",
+        "GetStockObject",
+        "GetSystemPaletteEntries",
+        "GetTextExtentPoint32A",
+        "GetTextExtentPointA",
+        "GetTextMetricsA",
+        "GetWinMetaFileBits",
+        "GetWindowOrgEx",
+        "IntersectClipRect",
+        "LineTo",
+        "MaskBlt",
+        "MoveToEx",
+        "PatBlt",
+        "PlayEnhMetaFile",
+        "Polyline",
+        "RealizePalette",
+        "RectVisible",
+        "Rectangle",
+        "RestoreDC",
+        "SaveDC",
+        "SelectObject",
+        "SelectPalette",
+        "SetBkColor",
+        "SetBkMode",
+        "SetBrushOrgEx",
+        "SetDIBColorTable",
+        "SetEnhMetaFileBits",
+        "SetPixel",
+        "SetROP2",
+        "SetStretchBltMode",
+        "SetTextColor",
+        "SetViewportOrgEx",
+        "SetWinMetaFileBits",
+        "SetWindowOrgEx",
+        "StretchBlt",
+        "UnrealizeObject"
+      ]
+    },
+    {
+      "dll": "IMAGEHLP.DLL",
+      "count": 7,
+      "functions": [
+        "SymCleanup",
+        "SymGetOptions",
+        "SymGetSymFromName",
+        "SymInitialize",
+        "SymLoadModule",
+        "SymSetOptions",
+        "SymSetSearchPath"
+      ]
+    },
+    {
+      "dll": "kernel32.dll",
+      "count": 93,
+      "functions": [
+        "CloseHandle",
+        "CompareStringA",
+        "CreateEventA",
+        "CreateFileA",
+        "CreateThread",
+        "DeleteCriticalSection",
+        "DeleteFileA",
+        "EnterCriticalSection",
+        "EnumCalendarInfoA",
+        "ExitProcess",
+        "ExitThread",
+        "FileTimeToDosDateTime",
+        "FileTimeToLocalFileTime",
+        "FindClose",
+        "FindFirstFileA",
+        "FindResourceA",
+        "FormatMessageA",
+        "FreeLibrary",
+        "FreeResource",
+        "GetACP",
+        "GetCPInfo",
+        "GetCommandLineA",
+        "GetCurrentDirectoryA",
+        "GetCurrentProcess",
+        "GetCurrentProcessId",
+        "GetCurrentThread",
+        "GetCurrentThreadId",
+        "GetDateFormatA",
+        "GetDiskFreeSpaceA",
+        "GetExitCodeThread",
+        "GetFullPathNameA",
+        "GetLastError",
+        "GetLocalTime",
+        "GetLocaleInfoA",
+        "GetModuleFileNameA",
+        "GetModuleHandleA",
+        "GetProcAddress",
+        "GetStartupInfoA",
+        "GetStdHandle",
+        "GetStringTypeExA",
+        "GetSystemInfo",
+        "GetThreadLocale",
+        "GetTickCount",
+        "GetVersion",
+        "GetVersionExA",
+        "GlobalAddAtomA",
+        "GlobalAlloc",
+        "GlobalDeleteAtom",
+        "GlobalFindAtomA",
+        "GlobalFree",
+        "GlobalHandle",
+        "GlobalLock",
+        "GlobalReAlloc",
+        "GlobalUnlock",
+        "InitializeCriticalSection",
+        "InterlockedDecrement",
+        "InterlockedExchange",
+        "InterlockedIncrement",
+        "LeaveCriticalSection",
+        "LoadLibraryA",
+        "LoadLibraryExA",
+        "LoadResource",
+        "LocalAlloc",
+        "LocalFree",
+        "LockResource",
+        "MulDiv",
+        "MultiByteToWideChar",
+        "RaiseException",
+        "ReadFile",
+        "ResetEvent",
+        "ResumeThread",
+        "RtlUnwind",
+        "SetCurrentDirectoryA",
+        "SetEndOfFile",
+        "SetErrorMode",
+        "SetEvent",
+        "SetFilePointer",
+        "SetThreadLocale",
+        "SizeofResource",
+        "Sleep",
+        "TlsGetValue",
+        "TlsSetValue",
+        "UnhandledExceptionFilter",
+        "VirtualAlloc",
+        "VirtualFree",
+        "VirtualFreeEx",
+        "VirtualQuery",
+        "WaitForSingleObject",
+        "WideCharToMultiByte",
+        "WriteFile",
+        "lstrcpyA",
+        "lstrcpynA",
+        "lstrlenA"
+      ]
+    },
+    {
+      "dll": "oleaut32.dll",
+      "count": 11,
+      "functions": [
+        "SafeArrayCreate",
+        "SafeArrayGetLBound",
+        "SafeArrayGetUBound",
+        "SafeArrayPtrOfIndex",
+        "SysAllocStringLen",
+        "SysFreeString",
+        "SysReAllocStringLen",
+        "VariantChangeType",
+        "VariantClear",
+        "VariantCopy",
+        "VariantInit"
+      ]
+    },
+    {
+      "dll": "shell32.dll",
+      "count": 1,
+      "functions": [
+        "ShellExecuteA"
+      ]
+    },
+    {
+      "dll": "user32.dll",
+      "count": 167,
+      "functions": [
+        "ActivateKeyboardLayout",
+        "AdjustWindowRectEx",
+        "BeginPaint",
+        "CallNextHookEx",
+        "CallWindowProcA",
+        "CharLowerA",
+        "CharLowerBuffA",
+        "CharNextA",
+        "CharToOemA",
+        "CharUpperBuffA",
+        "CheckMenuItem",
+        "ClientToScreen",
+        "CloseClipboard",
+        "CreateIcon",
+        "CreateMenu",
+        "CreatePopupMenu",
+        "CreateWindowExA",
+        "DefFrameProcA",
+        "DefMDIChildProcA",
+        "DefWindowProcA",
+        "DeleteMenu",
+        "DestroyCursor",
+        "DestroyIcon",
+        "DestroyMenu",
+        "DestroyWindow",
+        "DispatchMessageA",
+        "DrawEdge",
+        "DrawFrameControl",
+        "DrawIcon",
+        "DrawIconEx",
+        "DrawMenuBar",
+        "DrawTextA",
+        "EmptyClipboard",
+        "EnableMenuItem",
+        "EnableScrollBar",
+        "EnableWindow",
+        "EndPaint",
+        "EnumThreadWindows",
+        "EnumWindows",
+        "EqualRect",
+        "FillRect",
+        "FindWindowA",
+        "FrameRect",
+        "GetActiveWindow",
+        "GetAsyncKeyState",
+        "GetCapture",
+        "GetClassInfoA",
+        "GetClassNameA",
+        "GetClientRect",
+        "GetClipboardData",
+        "GetCursor",
+        "GetCursorPos",
+        "GetDC",
+        "GetDCEx",
+        "GetDesktopWindow",
+        "GetDlgItem",
+        "GetFocus",
+        "GetForegroundWindow",
+        "GetIconInfo",
+        "GetKeyNameTextA",
+        "GetKeyState",
+        "GetKeyboardLayout",
+        "GetKeyboardLayoutList",
+        "GetKeyboardState",
+        "GetKeyboardType",
+        "GetLastActivePopup",
+        "GetMenu",
+        "GetMenuItemCount",
+        "GetMenuItemID",
+        "GetMenuItemInfoA",
+        "GetMenuState",
+        "GetMenuStringA",
+        "GetParent",
+        "GetPropA",
+        "GetScrollInfo",
+        "GetScrollPos",
+        "GetScrollRange",
+        "GetSubMenu",
+        "GetSysColor",
+        "GetSysColorBrush",
+        "GetSystemMenu",
+        "GetSystemMetrics",
+        "GetTopWindow",
+        "GetWindow",
+        "GetWindowDC",
+        "GetWindowLongA",
+        "GetWindowPlacement",
+        "GetWindowRect",
+        "GetWindowTextA",
+        "GetWindowThreadProcessId",
+        "InflateRect",
+        "InsertMenuA",
+        "InsertMenuItemA",
+        "IntersectRect",
+        "InvalidateRect",
+        "IsChild",
+        "IsDialogMessageA",
+        "IsIconic",
+        "IsRectEmpty",
+        "IsWindow",
+        "IsWindowEnabled",
+        "IsWindowVisible",
+        "IsZoomed",
+        "KillTimer",
+        "LoadBitmapA",
+        "LoadCursorA",
+        "LoadIconA",
+        "LoadKeyboardLayoutA",
+        "LoadStringA",
+        "MapVirtualKeyA",
+        "MapWindowPoints",
+        "MessageBeep",
+        "MessageBoxA",
+        "MsgWaitForMultipleObjects",
+        "OemToCharA",
+        "OffsetRect",
+        "OpenClipboard",
+        "PeekMessageA",
+        "PostMessageA",
+        "PostQuitMessage",
+        "PtInRect",
+        "RedrawWindow",
+        "RegisterClassA",
+        "RegisterClipboardFormatA",
+        "RegisterWindowMessageA",
+        "ReleaseCapture",
+        "ReleaseDC",
+        "RemoveMenu",
+        "RemovePropA",
+        "ScreenToClient",
+        "ScrollWindow",
+        "SendMessageA",
+        "SetActiveWindow",
+        "SetCapture",
+        "SetClassLongA",
+        "SetClipboardData",
+        "SetCursor",
+        "SetFocus",
+        "SetForegroundWindow",
+        "SetMenu",
+        "SetMenuItemInfoA",
+        "SetParent",
+        "SetPropA",
+        "SetRect",
+        "SetScrollInfo",
+        "SetScrollPos",
+        "SetScrollRange",
+        "SetTimer",
+        "SetWindowLongA",
+        "SetWindowPlacement",
+        "SetWindowPos",
+        "SetWindowTextA",
+        "SetWindowsHookExA",
+        "ShowCursor",
+        "ShowOwnedPopups",
+        "ShowScrollBar",
+        "ShowWindow",
+        "SystemParametersInfoA",
+        "TrackPopupMenu",
+        "TranslateMDISysAccel",
+        "TranslateMessage",
+        "UnhookWindowsHookEx",
+        "UnregisterClassA",
+        "UpdateWindow",
+        "WaitMessage",
+        "WinHelpA",
+        "WindowFromPoint"
+      ]
+    },
+    {
+      "dll": "version.dll",
+      "count": 3,
+      "functions": [
+        "GetFileVersionInfoA",
+        "GetFileVersionInfoSizeA",
+        "VerQueryValueA"
+      ]
+    }
+  ],
+  "pe": {
+    "pe_offset": 256,
+    "machine": "I386",
+    "section_count": 8,
+    "timestamp": "0x2A425E19",
+    "optional_magic": "0x010B",
+    "entry_point_rva": 482064,
+    "image_base": 4194304,
+    "subsystem": "Windows GUI",
+    "characteristics": "0x818E",
+    "sections": [
+      {
+        "name": "CODE",
+        "virtual_size": 478048,
+        "virtual_address": 4096,
+        "raw_size": 478208,
+        "raw_offset": 1024,
+        "characteristics": "0x60000020"
+      },
+      {
+        "name": "DATA",
+        "virtual_size": 22008,
+        "virtual_address": 483328,
+        "raw_size": 22016,
+        "raw_offset": 479232,
+        "characteristics": "0xC0000040"
+      },
+      {
+        "name": "BSS",
+        "virtual_size": 4261,
+        "virtual_address": 507904,
+        "raw_size": 0,
+        "raw_offset": 501248,
+        "characteristics": "0xC0000000"
+      },
+      {
+        "name": ".idata",
+        "virtual_size": 9338,
+        "virtual_address": 516096,
+        "raw_size": 9728,
+        "raw_offset": 501248,
+        "characteristics": "0xC0000040"
+      },
+      {
+        "name": ".tls",
+        "virtual_size": 16,
+        "virtual_address": 528384,
+        "raw_size": 0,
+        "raw_offset": 510976,
+        "characteristics": "0xC0000000"
+      },
+      {
+        "name": ".rdata",
+        "virtual_size": 24,
+        "virtual_address": 532480,
+        "raw_size": 512,
+        "raw_offset": 510976,
+        "characteristics": "0x50000040"
+      },
+      {
+        "name": ".reloc",
+        "virtual_size": 35196,
+        "virtual_address": 536576,
+        "raw_size": 35328,
+        "raw_offset": 511488,
+        "characteristics": "0x50000040"
+      },
+      {
+        "name": ".rsrc",
+        "virtual_size": 30416,
+        "virtual_address": 573440,
+        "raw_size": 30720,
+        "raw_offset": 546816,
+        "characteristics": "0x50000040"
+      }
+    ],
+    "overlay": {
+      "offset": 577536,
+      "size": 844485
+    }
+  },
+  "resources": [
+    {
+      "path": "CURSOR/#1/#0",
+      "offset": 549976,
+      "size": 308,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "CURSOR/#2/#0",
+      "offset": 550284,
+      "size": 308,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "CURSOR/#3/#0",
+      "offset": 550592,
+      "size": 308,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "CURSOR/#4/#0",
+      "offset": 550900,
+      "size": 308,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "CURSOR/#5/#0",
+      "offset": 551208,
+      "size": 308,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "CURSOR/#6/#0",
+      "offset": 551516,
+      "size": 308,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "CURSOR/#7/#0",
+      "offset": 551824,
+      "size": 308,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "BITMAP/BBABORT/#0",
+      "offset": 552132,
+      "size": 464,
+      "codepage": 1252,
+      "preview": "333333333333333333 | 33333333?333333 | 3333 | 33?33 | 3833 | 33338 | 3331 | 33333"
+    },
+    {
+      "path": "BITMAP/BBALL/#0",
+      "offset": 552596,
+      "size": 484,
+      "codepage": 1252,
+      "preview": "334C33333338 | 33333 | 33B$3333333 | 3333 | 34\"\"C33333833 | 3333 | 3B\"\"$33333 | 4\"*\"\"C3338"
+    },
+    {
+      "path": "BITMAP/BBCANCEL/#0",
+      "offset": 553080,
+      "size": 464,
+      "codepage": 1252,
+      "preview": "333333333333333333 | 33333333?333333 | 3333 | 33?33 | 3833 | 33338 | 3331 | 33333"
+    },
+    {
+      "path": "BITMAP/BBCLOSE/#0",
+      "offset": 553544,
+      "size": 464,
+      "codepage": 1252,
+      "preview": "33MP | 3333 | 33M] | 3333 | 3333 | 33M] | 3333 | 3333"
+    },
+    {
+      "path": "BITMAP/BBHELP/#0",
+      "offset": 554008,
+      "size": 464,
+      "codepage": 1252,
+      "preview": "3333f3333333? | 3333 | 3336Dc3333338 | 3333 | 333>fC333333 | 3333 | c333333 | 3333333333338"
+    },
+    {
+      "path": "BITMAP/BBIGNORE/#0",
+      "offset": 554472,
+      "size": 464,
+      "codepage": 1252,
+      "preview": "4DF334DC33 | 333*C33 | c33*C333 | 338?3 | c333 | 33338?383 | F*F333383 | \"$c33333"
+    },
+    {
+      "path": "BITMAP/BBNO/#0",
+      "offset": 554936,
+      "size": 464,
+      "codepage": 1252,
+      "preview": "333333333333? | 33333? | 3333 | 3838 | 3333 | 333333 | 333333333333333333"
+    },
+    {
+      "path": "BITMAP/BBOK/#0",
+      "offset": 555400,
+      "size": 464,
+      "codepage": 1252,
+      "preview": "333333333333333333 | 333333333333 | 33333 | 334C33333338 | 33333 | 33B$3333333 | 3333 | 34\"\"C33333833"
+    },
+    {
+      "path": "BITMAP/BBRETRY/#0",
+      "offset": 555864,
+      "size": 464,
+      "codepage": 1252,
+      "preview": "333DDD33333? | 2C4\"\"\"D338 | 8333 | 2$B\"\"\"\"C38 | 2\"\"* | \"$38 | 2\"\"333:\"C8 | 83338"
+    },
+    {
+      "path": "BITMAP/BBYES/#0",
+      "offset": 556328,
+      "size": 464,
+      "codepage": 1252,
+      "preview": "333333333333333333 | 333333333333 | 33333 | 334C33333338 | 33333 | 33B$3333333 | 3333 | 34\"\"C33333833"
+    },
+    {
+      "path": "BITMAP/PREVIEWGLYPH/#0",
+      "offset": 556792,
+      "size": 232,
+      "codepage": 1252,
+      "preview": "33333333"
+    },
+    {
+      "path": "ICON/#1/#1033",
+      "offset": 557024,
+      "size": 4264,
+      "codepage": 1252,
+      "preview": "a!8F | d&@J | ^%@G | $$$# | iii\""
+    },
+    {
+      "path": "DIALOG/DLGTEMPLATE/#0",
+      "offset": 561288,
+      "size": 82,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4080/#0",
+      "offset": 561372,
+      "size": 88,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4081/#0",
+      "offset": 561460,
+      "size": 484,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4082/#0",
+      "offset": 561944,
+      "size": 420,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4083/#0",
+      "offset": 562364,
+      "size": 284,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4084/#0",
+      "offset": 562648,
+      "size": 772,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4085/#0",
+      "offset": 563420,
+      "size": 216,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4086/#0",
+      "offset": 563636,
+      "size": 280,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4087/#0",
+      "offset": 563916,
+      "size": 616,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4088/#0",
+      "offset": 564532,
+      "size": 1016,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4089/#0",
+      "offset": 565548,
+      "size": 860,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4090/#0",
+      "offset": 566408,
+      "size": 1088,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4091/#0",
+      "offset": 567496,
+      "size": 432,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4092/#0",
+      "offset": 567928,
+      "size": 236,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4093/#0",
+      "offset": 568164,
+      "size": 484,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4094/#0",
+      "offset": 568648,
+      "size": 1012,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4095/#0",
+      "offset": 569660,
+      "size": 832,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "STRING/#4096/#0",
+      "offset": 570492,
+      "size": 724,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "RCDATA/DVCLAL/#0",
+      "offset": 571216,
+      "size": 16,
+      "codepage": 1252,
+      "preview": "&=O8"
+    },
+    {
+      "path": "RCDATA/PACKAGEINFO/#0",
+      "offset": 571232,
+      "size": 896,
+      "codepage": 1252,
+      "preview": "Trainerwithassembler | PsAPI | System | SysInit | KWindows | UTypes | ImageHlp | TlHelp32"
+    },
+    {
+      "path": "RCDATA/TFRMMAIN/#0",
+      "offset": 572128,
+      "size": 279,
+      "codepage": 1252,
+      "preview": "TPF0 | TfrmMain | frmMain | Left | Width | Height | Caption | Main"
+    },
+    {
+      "path": "RCDATA/TFRMMEMORYTRAINER/#0",
+      "offset": 572408,
+      "size": 2036,
+      "codepage": 1252,
+      "preview": "TPF0 | TfrmMemoryTrainer | frmMemoryTrainer | Left | BorderIcons | biSystemMenu | biMinimize | BorderStyle"
+    },
+    {
+      "path": "RCDATA/TFRMPATCHER/#0",
+      "offset": 574444,
+      "size": 653,
+      "codepage": 1252,
+      "preview": "TPF0 | TfrmPatcher | frmPatcher | Left | Width | Height | BorderIcons | biSystemMenu"
+    },
+    {
+      "path": "RCDATA/TUSERDEFINEDFORM/#0",
+      "offset": 575100,
+      "size": 383,
+      "codepage": 1252,
+      "preview": "TPF0 | TUserdefinedform | Userdefinedform | Left | BorderIcons | biSystemMenu | biMinimize | BorderStyle"
+    },
+    {
+      "path": "GROUP_CURSOR/#32761/#0",
+      "offset": 575484,
+      "size": 20,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "GROUP_CURSOR/#32762/#0",
+      "offset": 575504,
+      "size": 20,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "GROUP_CURSOR/#32763/#0",
+      "offset": 575524,
+      "size": 20,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "GROUP_CURSOR/#32764/#0",
+      "offset": 575544,
+      "size": 20,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "GROUP_CURSOR/#32765/#0",
+      "offset": 575564,
+      "size": 20,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "GROUP_CURSOR/#32766/#0",
+      "offset": 575584,
+      "size": 20,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "GROUP_CURSOR/#32767/#0",
+      "offset": 575604,
+      "size": 20,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "GROUP_ICON/MAINICON/#1033",
+      "offset": 575624,
+      "size": 20,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "VERSION/#1/#1043",
+      "offset": 575644,
+      "size": 764,
+      "codepage": 1252,
+      "preview": ""
+    },
+    {
+      "path": "MANIFEST/#1/#0",
+      "offset": 576408,
+      "size": 824,
+      "codepage": 1252,
+      "preview": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?> | <assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\"> |   <assemblyIdentity | type=\"win32\" |     name=\"DelphiApplication\" |     version=\"1.0.0.0\"  | processorArchitecture=\"*\"/> | <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\">"
+    }
+  ],
+  "forms": [
+    {
+      "resource": "RCDATA/TFRMMAIN/#0",
+      "name": "TfrmMain",
+      "components": [
+        "TextHeight",
+        "Top"
+      ],
+      "caption": "Main",
+      "captions": [
+        "Main"
+      ],
+      "strings": [
+        "TPF0",
+        "TfrmMain",
+        "frmMain",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Caption",
+        "Main",
+        "Color",
+        "clBtnFace",
+        "Font.Charset",
+        "DEFAULT_CHARSET",
+        "Font.Color",
+        "clWindowText",
+        "Font.Height",
+        "Font.Name",
+        "MS Sans Serif",
+        "Font.Style",
+        "OldCreateOrder",
+        "OnClose",
+        "FormClose",
+        "OnCreate",
+        "FormCreate",
+        "PixelsPerInch",
+        "TextHeight"
+      ]
+    },
+    {
+      "resource": "RCDATA/TFRMMEMORYTRAINER/#0",
+      "name": "TfrmMemoryTrainer",
+      "components": [
+        "TButton",
+        "TImage",
+        "TLabel",
+        "TOpenDialog",
+        "TPanel",
+        "TScrollBox",
+        "TTimer",
+        "TabOrder",
+        "TextHeight",
+        "Timer1",
+        "Timer1Timer",
+        "Timer2",
+        "Timer2Timer",
+        "Timer3",
+        "Timer3Timer",
+        "Title",
+        "Top"
+      ],
+      "caption": "frmMemoryTrainer",
+      "captions": [
+        "frmMemoryTrainer",
+        "Close",
+        "Hotkey:",
+        "Effect",
+        "Button3",
+        "Launch",
+        "About"
+      ],
+      "strings": [
+        "TPF0",
+        "TfrmMemoryTrainer",
+        "frmMemoryTrainer",
+        "Left",
+        "Top",
+        "BorderIcons",
+        "biSystemMenu",
+        "biMinimize",
+        "BorderStyle",
+        "bsSingle",
+        "Caption",
+        "frmMemoryTrainer",
+        "ClientHeight",
+        "ClientWidth",
+        "Color",
+        "clBtnFace",
+        "Font.Charset",
+        "DEFAULT_CHARSET",
+        "Font.Color",
+        "clWindowText",
+        "Font.Height",
+        "Font.Name",
+        "MS Sans Serif",
+        "Font.Style",
+        "OldCreateOrder",
+        "Position",
+        "poScreenCenter",
+        "OnClose",
+        "FormClose",
+        "OnCreate",
+        "FormCreate",
+        "PixelsPerInch",
+        "TextHeight",
+        "TPanel",
+        "Panel2",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Align",
+        "alClient",
+        "BevelOuter",
+        "bvNone",
+        "TabOrder",
+        "DesignSize",
+        "TButton",
+        "Button1",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Anchors",
+        "akBottom",
+        "Caption",
+        "Close",
+        "TabOrder",
+        "OnClick",
+        "Button1Click",
+        "TScrollBox",
+        "ScrollBox1",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Align",
+        "alTop",
+        "Anchors",
+        "akLeft",
+        "akTop",
+        "akRight",
+        "akBottom",
+        "BevelInner",
+        "bvNone",
+        "BevelOuter",
+        "bvNone",
+        "BorderStyle",
+        "bsNone",
+        "TabOrder",
+        "TLabel",
+        "Label1",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Caption",
+        "Hotkey:",
+        "TLabel",
+        "Label2",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Caption",
+        "Effect",
+        "TButton",
+        "Button3",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Caption",
+        "Button3",
+        "TabOrder",
+        "Visible",
+        "OnClick",
+        "Button3Click",
+        "TPanel",
+        "Panel1",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Align",
+        "alLeft",
+        "BevelInner",
+        "bvLowered",
+        "BevelOuter",
+        "bvLowered",
+        "TabOrder",
+        "DesignSize",
+        "TImage",
+        "Image1",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Anchors",
+        "akLeft",
+        "akTop",
+        "akRight",
+        "akBottom",
+        "Stretch",
+        "TButton",
+        "btnLaunch",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Anchors",
+        "akLeft",
+        "akTop",
+        "akRight",
+        "Caption",
+        "Launch",
+        "Font.Charset",
+        "ANSI_CHARSET",
+        "Font.Color",
+        "clWindowText",
+        "Font.Height",
+        "Font.Name",
+        "MS Serif",
+        "Font.Style",
+        "fsBold",
+        "ParentFont",
+        "TabOrder",
+        "OnClick",
+        "btnLaunchClick",
+        "TButton",
+        "Button2",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Anchors",
+        "akLeft",
+        "akRight",
+        "akBottom",
+        "Caption",
+        "About",
+        "TabOrder",
+        "OnClick",
+        "Button2Click",
+        "TTimer",
+        "Timer1",
+        "Interval",
+        "OnTimer",
+        "Timer1Timer",
+        "Left",
+        "Top",
+        "TOpenDialog",
+        "OpenDialog1",
+        "Options",
+        "ofHideReadOnly",
+        "ofPathMustExist",
+        "ofFileMustExist",
+        "ofEnableSizing",
+        "Title",
+        "Open",
+        "Left",
+        "Top",
+        "TTimer",
+        "Freezer",
+        "Interval",
+        "OnTimer",
+        "FreezerTimer",
+        "Left",
+        "Top",
+        "TTimer",
+        "Timer2",
+        "Interval",
+        "OnTimer",
+        "Timer2Timer",
+        "Left",
+        "Top",
+        "TTimer",
+        "Timer3",
+        "Interval",
+        "OnTimer",
+        "Timer3Timer",
+        "Left",
+        "Top"
+      ]
+    },
+    {
+      "resource": "RCDATA/TFRMPATCHER/#0",
+      "name": "TfrmPatcher",
+      "components": [
+        "TButton",
+        "TMemo",
+        "TOpenDialog",
+        "TabOrder",
+        "TextHeight",
+        "Top"
+      ],
+      "caption": "Apply Patch!",
+      "captions": [
+        "Apply Patch!",
+        "&Click Apply Patch! to completly whipe "
+      ],
+      "strings": [
+        "TPF0",
+        "TfrmPatcher",
+        "frmPatcher",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "BorderIcons",
+        "biSystemMenu",
+        "Caption",
+        "Color",
+        "clBtnFace",
+        "Font.Charset",
+        "DEFAULT_CHARSET",
+        "Font.Color",
+        "clWindowText",
+        "Font.Height",
+        "Font.Name",
+        "MS Sans Serif",
+        "Font.Style",
+        "OldCreateOrder",
+        "Position",
+        "poScreenCenter",
+        "OnClose",
+        "FormClose",
+        "OnCreate",
+        "FormCreate",
+        "DesignSize",
+        "PixelsPerInch",
+        "TextHeight",
+        "TButton",
+        "Button1",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Anchors",
+        "Caption",
+        "Apply Patch!",
+        "TabOrder",
+        "OnClick",
+        "Button1Click",
+        "TMemo",
+        "Messages",
+        "Left",
+        "Top",
+        "Width",
+        "Height",
+        "Align",
+        "alTop",
+        "Lines.Strings",
+        "&Click Apply Patch! to completly whipe ",
+        "out your hard disk!",
+        "TabOrder",
+        "TOpenDialog",
+        "OpenDialog1",
+        "Left",
+        "Top"
+      ]
+    },
+    {
+      "resource": "RCDATA/TUSERDEFINEDFORM/#0",
+      "name": "TUserdefinedform",
+      "components": [
+        "TextHeight",
+        "Top"
+      ],
+      "caption": "Userdefinedform",
+      "captions": [
+        "Userdefinedform"
+      ],
+      "strings": [
+        "TPF0",
+        "TUserdefinedform",
+        "Userdefinedform",
+        "Left",
+        "Top",
+        "BorderIcons",
+        "biSystemMenu",
+        "biMinimize",
+        "BorderStyle",
+        "bsSingle",
+        "Caption",
+        "Userdefinedform",
+        "ClientHeight",
+        "ClientWidth",
+        "Color",
+        "clBtnFace",
+        "Font.Charset",
+        "DEFAULT_CHARSET",
+        "Font.Color",
+        "clWindowText",
+        "Font.Height",
+        "Font.Name",
+        "MS Sans Serif",
+        "Font.Style",
+        "OldCreateOrder",
+        "Position",
+        "poScreenCenter",
+        "OnClose",
+        "FormClose",
+        "PixelsPerInch",
+        "TextHeight"
+      ]
+    }
+  ],
+  "trainer_metadata": {
+    "internal_name": "Cheat Engine Trainer",
+    "target_process": "ra3_1.12.game",
+    "packages": [
+      "Trainerwithassembler",
+      "PsAPI",
+      "System",
+      "SysInit",
+      "KWindows",
+      "UTypes",
+      "ImageHlp",
+      "TlHelp32",
+      "FlatSB",
+      "WinHelpViewer",
+      "RHelpIntfs",
+      "Contnrs",
+      "\"RTLConsts",
+      "Math",
+      "SysConst",
+      "SysUtils",
+      "^Classes",
+      "3Messages",
+      "CVariants",
+      "$VarUtils",
+      "QTypInfo",
+      "sActiveX",
+      "EActnList",
+      "Forms",
+      "Printers",
+      "Consts",
+      "WWinSpool",
+      "+Graphics",
+      "CommCtrl",
+      "StdActns",
+      "Clipbrd",
+      "YStrUtils",
+      "*ShellAPI",
+      "&Controls",
+      "5Themes",
+      "nComCtrls",
+      "ComStrs",
+      "ExtActns",
+      "0Mapi",
+      "dStdCtrls",
+      "vMenus",
+      "ImgList",
+      "Dialogs",
+      "ExtCtrls",
+      "IDlgs",
+      "3CommDlg",
+      "(ShlObj",
+      "RegStr",
+      "?WinInet",
+      "UrlMon",
+      "ExtDlgs",
+      "Buttons",
+      "8Registry",
+      "IniFiles",
+      "CUxTheme",
+      "SyncObjs",
+      "RichEdit",
+      "ToolWin",
+      "ListActns",
+      "MultiMon",
+      "Imm",
+      ",ProcessHandlerUnit",
+      "autoassembler",
+      "Assemblerunit",
+      "|CEFuncProc",
+      "symbolhandler",
+      "NewKernelHandler",
+      "Filehandler",
+      "reinit",
+      "HotkeyHandler",
+      "lUserdefinedformunit",
+      "ExtraTrainerComponents",
+      "MemoryTrainerUnit",
+      "Usettingsunit",
+      "frmMainUnit",
+      "}PatcherUnit"
+    ]
+  },
+  "features": [
+    {
+      "offset": 597231,
+      "name": "Moeny",
+      "hotkey": "Ctrl+F1",
+      "value_hint": "0x01",
+      "enable_flags": [
+        "iEnable+8"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 597312,
+      "name": "Power",
+      "hotkey": "Ctrl+F2",
+      "value_hint": "0x01",
+      "enable_flags": [
+        "iEnable+9"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 597437,
+      "name": "SC POINT",
+      "hotkey": "Ctrl+F3",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+A"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 597565,
+      "name": "HAVE ALL SC",
+      "hotkey": "Ctrl+F4",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+B"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 597696,
+      "name": "FAST BUILD",
+      "hotkey": "Ctrl+F5",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+C"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 597826,
+      "name": "SUPER POWER",
+      "hotkey": "Ctrl+F6",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+D"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 597957,
+      "name": "Disable ALL SP",
+      "hotkey": "Ctrl+F7",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+E"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 598091,
+      "name": "Zoom",
+      "hotkey": "Ctrl+F8",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+F",
+        "iEnable+10"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 598255,
+      "name": "MAP",
+      "hotkey": "Ctrl+F9",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+11"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 598380,
+      "name": "Enemy Can't Build",
+      "hotkey": "Ctrl+F10",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+15"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 598520,
+      "name": "Player God Mode",
+      "hotkey": "Ctrl+F11",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+16"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 598658,
+      "name": "Player One Kill Mode",
+      "hotkey": "Ctrl+F12",
+      "value_hint": null,
+      "enable_flags": [
+        "iEnable+17"
+      ],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 598801,
+      "name": "Select Unit Level UP",
+      "hotkey": "PP",
+      "value_hint": "0x08",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+700",
+      "dispatch_description": "SelectUnitLevelUp"
+    },
+    {
+      "offset": 598892,
+      "name": "Select Unit Super Speed",
+      "hotkey": "#189",
+      "value_hint": "0x01",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2",
+      "dispatch_description": "SelectUnitMAXSpeed"
+    },
+    {
+      "offset": 598989,
+      "name": "Select Unit Slow Speed",
+      "hotkey": "#187",
+      "value_hint": "0x02",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+100",
+      "dispatch_description": "SelectUnitSlowSpeed"
+    },
+    {
+      "offset": 599085,
+      "name": "Select Unit Freeze",
+      "hotkey": "Page Up",
+      "value_hint": "0x03",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+200",
+      "dispatch_description": "SelectUnitFreeze"
+    },
+    {
+      "offset": 599180,
+      "name": "Restore Select Unit Speed",
+      "hotkey": "Page Down",
+      "value_hint": "0x04",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+300",
+      "dispatch_description": "RestoreSelectUnitSpeed"
+    },
+    {
+      "offset": 599284,
+      "name": "Select Unit HP MAX",
+      "hotkey": "#219",
+      "value_hint": "0x05",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+400",
+      "dispatch_description": "SelectUnitHpMax"
+    },
+    {
+      "offset": 599376,
+      "name": "Select Unit HP MIN",
+      "hotkey": "#221",
+      "value_hint": "0x06",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+500",
+      "dispatch_description": "SelectUnitHpMin"
+    },
+    {
+      "offset": 599468,
+      "name": "Restore Select Unit Normal HP",
+      "hotkey": "#220",
+      "value_hint": "0x07",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+600",
+      "dispatch_description": "SelectUnitHpNormal"
+    },
+    {
+      "offset": 599572,
+      "name": "Select Unit Ammo MAX",
+      "hotkey": "#186",
+      "value_hint": "0x01",
+      "enable_flags": [],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 599667,
+      "name": "Select Unit Ammo MAX 2",
+      "hotkey": "#186",
+      "value_hint": "0x00",
+      "enable_flags": [],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 599763,
+      "name": "Select Unit Change ID",
+      "hotkey": "Delete",
+      "value_hint": "0x09",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+800",
+      "dispatch_description": "ChangeSelectUnit ID"
+    },
+    {
+      "offset": 599855,
+      "name": "Destory Select Unit",
+      "hotkey": "Delete",
+      "value_hint": "0x0A",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+900",
+      "dispatch_description": "DestroySelectUnit"
+    },
+    {
+      "offset": 599949,
+      "name": "Danger Level MAX",
+      "hotkey": "#188",
+      "value_hint": "0x01",
+      "enable_flags": [],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 600039,
+      "name": "Danger Level MIN",
+      "hotkey": "#190",
+      "value_hint": "0x02",
+      "enable_flags": [],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 600129,
+      "name": "Restore Danger Level Normal",
+      "hotkey": "#191",
+      "value_hint": "0x00",
+      "enable_flags": [],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 600230,
+      "name": "Restore Select Ore Mine",
+      "hotkey": "#222",
+      "value_hint": "0x01",
+      "enable_flags": [],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 600327,
+      "name": "Free Build",
+      "hotkey": null,
+      "value_hint": "0x01",
+      "enable_flags": [],
+      "dispatch_target": null,
+      "dispatch_description": null
+    },
+    {
+      "offset": 600469,
+      "name": "Get Me Base",
+      "hotkey": null,
+      "value_hint": "0x0B",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+A00",
+      "dispatch_description": "GetMeBase"
+    },
+    {
+      "offset": 600551,
+      "name": "Select Unit Copy For Me",
+      "hotkey": null,
+      "value_hint": "0x0D",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+c00",
+      "dispatch_description": "Select Unit Copy For Me"
+    },
+    {
+      "offset": 600645,
+      "name": "We Need Back",
+      "hotkey": null,
+      "value_hint": "0x0C",
+      "enable_flags": [],
+      "dispatch_target": "MustCode2+B00",
+      "dispatch_description": "We need Back"
+    }
+  ],
+  "auto_assembler_scripts": [
+    {
+      "offset": 577627,
+      "size": 19604,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": null,
+      "preview": "[ENABLE]\n//=========================================\n// Cheat Master Codes\n// Command and Conquer - Red Alert 3\n// Game Version : 1.12.3444.25830\n// Script Version : Final.3 (3.3)\n// Writer : Ken22265\n// Public Data : December , 2009\n// Script Only Work For Cheat Engine 5.5.  \n\nfullaccess(00401000,0x7c6000)\nglobalalloc(ID,0x100)\nglobalalloc(iEnable,0x100)\nglobalalloc(MustCode,0x3000)\nglobalalloc(MustCode2,0x1000)\ndefine(SelectUnitLevelUp,call MustCode+800)\ndefine(DestroySelectUnit,call MustCode+900)\ndefine(GetUnitData,call MustCode+A00)\ndefine(GetUnitData2,call MustCode+A60)\ndefine(CreateUnit,\n...",
+      "summary": {
+        "globalalloc": [
+          "ID,0x100",
+          "iEnable,0x100",
+          "MustCode,0x3000",
+          "MustCode2,0x1000"
+        ],
+        "define": [
+          "SelectUnitLevelUp,call MustCode+800",
+          "DestroySelectUnit,call MustCode+900",
+          "GetUnitData,call MustCode+A00",
+          "GetUnitData2,call MustCode+A60",
+          "CreateUnit,call MustCode+AA0",
+          "SetUnitState,call MustCode+B00",
+          "GetMouseXYZinMap,call Mustcode+1120"
+        ],
+        "label": [
+          "_BackPlayerID",
+          "_BackPlayerMoney",
+          "_BackPlayerPower",
+          "_BackPlayerSCPoint",
+          "_BackPlayerHaveAllSC",
+          "_BackPlayerFastBuild",
+          "_BackPlayerFastBuild2",
+          "_BackPlayerFastBuild3",
+          "_BackPlayerSuperPower",
+          "_BackPlayerSuperPower2",
+          "_BackDisableAllSuperPower",
+          "_BackDisableAllSuperPower2",
+          "_BackPlayerZoom",
+          "_BackPlayerMap",
+          "_BackSelectUnitAmmo",
+          "_BackDangerLevel",
+          "_BackRestoreOreMine",
+          "_BackEnemyCantBuild",
+          "_BackPlayerGodMode",
+          "_BackPlayerOneKillItMode",
+          "_ExitPlayerOneKillItMode",
+          "_BackPlayerOneKillItModeData",
+          "_BackPlayerOneKillItModeData2"
+        ],
+        "hooks": [
+          "ra3_1.12.game+FF95B",
+          "ra3_1.12.game+6CFDFE",
+          "ra3_1.12.game+6CFD0D",
+          "ra3_1.12.game+6CFE6C",
+          "ra3_1.12.game+6CFEB5",
+          "ra3_1.12.game+30F42E",
+          "ra3_1.12.game+30F38C",
+          "ra3_1.12.game+2F6CFF",
+          "ra3_1.12.game+2EBB69",
+          "ra3_1.12.game+43EC19",
+          "ra3_1.12.game+43ECA6",
+          "ra3_1.12.game+30A5F6",
+          "ra3_1.12.game+1EC7CD",
+          "ra3_1.12.game+3C226C",
+          "ra3_1.12.game+128735",
+          "ra3_1.12.game+438ED0",
+          "ra3_1.12.game+2D4933",
+          "ra3_1.12.game+30F530",
+          "ra3_1.12.game+12EEDF",
+          "ra3_1.12.game+3651AE",
+          "ra3_1.12.game+3FE714",
+          "ra3_1.12.game+2E24E3"
+        ]
+      },
+      "script": "[ENABLE]\n//=========================================\n// Cheat Master Codes\n// Command and Conquer - Red Alert 3\n// Game Version : 1.12.3444.25830\n// Script Version : Final.3 (3.3)\n// Writer : Ken22265\n// Public Data : December , 2009\n// Script Only Work For Cheat Engine 5.5.  \n\nfullaccess(00401000,0x7c6000)\nglobalalloc(ID,0x100)\nglobalalloc(iEnable,0x100)\nglobalalloc(MustCode,0x3000)\nglobalalloc(MustCode2,0x1000)\ndefine(SelectUnitLevelUp,call MustCode+800)\ndefine(DestroySelectUnit,call MustCode+900)\ndefine(GetUnitData,call MustCode+A00)\ndefine(GetUnitData2,call MustCode+A60)\ndefine(CreateUnit,call MustCode+AA0)\ndefine(SetUnitState,call MustCode+B00)\ndefine(GetMouseXYZinMap,call Mustcode+1120)\nlabel(_BackPlayerID)\nlabel(_BackPlayerMoney)\nlabel(_BackPlayerPower)\nlabel(_BackPlayerSCPoint)\nlabel(_BackPlayerHaveAllSC)\nlabel(_BackPlayerFastBuild)\nlabel(_BackPlayerFastBuild2)\nlabel(_BackPlayerFastBuild3)\nlabel(_BackPlayerSuperPower)\nlabel(_BackPlayerSuperPower2)\nlabel(_BackDisableAllSuperPower)\nlabel(_BackDisableAllSuperPower2)\nlabel(_BackPlayerZoom)\nlabel(_BackPlayerMap)\nlabel(_BackSelectUnitAmmo)\nlabel(_BackDangerLevel)\nlabel(_BackRestoreOreMine)\nlabel(_BackEnemyCantBuild)\nlabel(_BackPlayerGodMode)\nlabel(_BackPlayerOneKillItMode)\nlabel(_ExitPlayerOneKillItMode)\nlabel(_BackPlayerOneKillItModeData)\nlabel(_BackPlayerOneKillItModeData2)\n\niEnable+24:\ndb A0 A5 86 65\n\nra3_1.12.game+FF95B:\njmp MustCode\nnop\n_BackPlayerID:\n\nMustCode:\npushad\nmov edx,[eax+28]\nmov [ID],edx\nmov eax,[edx+20]\nmov [ID+4],eax\npopad\nmov edx,[eax+28]\nmov eax,[edx+20]\njmp _BackPlayerID\n\n//Player Money Code\nra3_1.12.game+6CFDFE:     \njmp MustCode+29\n_BackPlayerMoney:\n\nMustCode+29:\nPushfd\nPushad\ncmp byte ptr [iEnable+8],01\ndb 75 0e\nmov byte ptr [iEnable+8],00\nadd [eax+04],#100000\nmov [eax+08],#99999999\nPopad\nPopfd\nadd edi,[eax+4]\nmov edx,[ecx]\nmov eax,[iEnable+20]\ntest eax,eax\njne MustCode+600\njmp _BackPlayerMoney\n\n//Player Power Code\nra3_1.12.game+6CFD0D:\njmp MustCode+6c\nnop\nnop\nnop\nnop\n_BackPlayerPower:\n\nMustCode+6c:\nPushfd\nPushad\ncmp byte ptr [iEnable+9],01\ndb 75 0e\nmov [eax+04],000186A0\nmov [eax+08],00000000\nPopad\nPopfd\nmov eax,[eax+04]\nmov ecx,[esi+000003B0]\njmp _BackPlayerPower\n\n//Player SCPoints Code\nra3_1.12.game+6CFE6C:\njmp MustCode+9F\nnop\n_BackPlayerSCPoint:\n\nMustCode+9F:\npushfd\npushad\ncmp byte ptr [iEnable+A],01\ndb 75 07\nmov [eax+34],0000000f\npopad\npopfd\nmov edi,[eax+34]\nmov ecx,[esi+3c]\njmp _BackPlayerSCPoint\n\n//Player Have All SC Code\nra3_1.12.game+6CFEB5:\njmp MustCode+c8\n_BackPlayerHaveAllSC:\n\nMustCode+c8:\npushfd\npushad\ncmp byte ptr [iEnable+B],01\ndb 75 07\nmov [edi+2c],43c78000\npopad\npopfd\nmovss xmm0,[edi+2c]\njmp _BackPlayerHaveAllSC\n\n//Player Fast Build 1 Code\nra3_1.12.game+30F42E:\njmp MustCode+f0\n_BackPlayerFastBuild:\n\nMustCode+f0:\npushfd\npushad\ncmp byte ptr [iEnable+C],01\ndb 75 07\nmov [esi+1c],42c80000\npopad\npopfd\ncvttss2si eax,[esi+1c]\njmp _BackPlayerFastBuild\n\n//Player Fast Build 2 Code\nra3_1.12.game+30F38C:\njmp MustCode+118\nnop\n_BackPlayerFastBuild2:\n\nMustCode+118:\npushfd\npushad\ncmp byte ptr [iEnable+C],01\ndb 75 07\nmov [esi+1c],42c80000\npopad\npopfd\nfld dword ptr [esi+1c]\nmov [esi+5c],eax\njmp _BackPlayerFastBuild2\n\n//Player Fast Build 3 Code\nra3_1.12.game+2F6CFF:   \njmp MustCode+141\nnop\n_BackPlayerFastBuild3:\n\nMustCode+141:\npushfd\npushad\ncmp byte ptr [iEnable+C],01\ndb 75 07\ncmp ebp,01\ndb 74 02\ndb eb 0d\npopad\npopfd\nfld dword ptr [esi+000001bc]\njmp _BackPlayerFastBuild3\npushad\nmov eax,[edi+3c]\ninc eax\nmov [edi+14],eax\npopad\ndb eb e8\n\n//Player Super Power Code\nra3_1.12.game+2EBB69: \njmp MustCode+175\nnop\n_BackPlayerSuperPower:\n\nMustCode+175:\npushfd\npushad\ncmp byte ptr [iEnable+D],01\ndb 75 15\nmov ecx,[ID]\ncmp [eax+00000418],ecx\ndb 75 07\nmov [esi+20],00000001\ncmp byte ptr [iEnable+E],01\ndb 75 15\nmov ecx,[ID]\ncmp [eax+00000418],ecx\ndb 74 07\nadd [esi+20],00000001\npopad\npopfd\nmov ebx,[eax+00000418]\njmp _BackPlayerSuperPower\n\n//Player Super Power 2 Code\nra3_1.12.game+43EC19:\njmp MustCode+1ca\n_BackPlayerSuperPower2:\n\nMustCode+1ca:\nmov esi,[eax+50]\nmov eax,[ecx]\npushfd\npushad\ncmp byte ptr [iEnable+D],01\ndb 75 2e \nmov ecx,[id]\ncmp [esp+28],ecx\ndb 75 22\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\ncmp byte ptr [iEnable+E],01\ndb 75 2e \nmov ecx,[id]\ncmp [esp+28],ecx\ndb 74 22\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\npopad\npopfd\njmp _BackPlayerSuperPower2\n\n//Disable All Super Power Code\nra3_1.12.game+43ECA6:  \njmp MustCode+250\nnop\n_BackDisableAllSuperPower:\n\nMustCode+250:\nmov edx,[ecx+50]\ncmp edx,[eax+0c]\npushfd\npushad\ncmp byte ptr [iEnable+E],01\ndb 75 22\nadd [eax+0c],00000001\nmov eax,[eax]\nadd [eax+0c],00000001\nmov eax,[eax]\nadd [eax+0c],00000001\nmov eax,[eax]\nadd [eax+0c],00000001\npopad\npopfd\njmp _BackDisableAllSuperPower\n\n//Disable All Super Power 2 Code\nra3_1.12.game+30A5F6:  \njmp MustCode+294\nnop\n_BackDisableAllSuperPower2:\n\nMustCode+294:\nmov ecx,[eax+50]\ncmp ecx,[esi+20]\npushfd\npushad\ncmp byte ptr [iEnable+E],01\ndb 75 07\nadd [esi+20],00000001\npopad\npopfd\njmp _BackDisableAllSuperPower2\n\n// Player Zoom Code\nra3_1.12.game+1EC7CD: \njmp MustCode+2bd\n_BackPlayerZoom:\n\nMustCode+2bd:\nmovss [esi+44],xmm0\ncmp byte ptr [iEnable+F],1\ndb 75 0b\njmp _BackPlayerZoom\nfadd dword ptr [esi+44]\nfstp dword ptr [esi+44]\ncmp byte ptr [iEnable+10],1\ndb 75 0b\njmp _BackPlayerZoom\nfsub dword ptr [esi+44]\nfstp dword ptr [esi+44]\njmp _BackPlayerZoom\n\n// Player Map Code\nra3_1.12.game+3C226C:\njmp MustCode+2f9\nnop\nnop\nnop\n_BackPlayerMap:\n\nMustCode+2f9:\nmovss [ebp+00000260],xmm0\npushfd\npushad\ncmp byte ptr [iEnable+11],01\ndb 75 0a\nmov [ebp+00000260],47c35000\npopad\npopfd\njmp _BackPlayerMap\n\n// Select Unit Ammo Code   \nra3_1.12.game+128735:\njmp MustCode+327\n_BackSelectUnitAmmo:\n\nMustCode+327:\nmov ecx,[edx+edi*4]\ntest ecx,ecx\npushfd\npushad\ncmp byte ptr [iEnable+12],01\ndb 75 13\ncmp [ebp+3AC],00000000\ndb 74 07\nmov [ecx+1c],7FFFFFFF\npopad\npopfd\njmp _BackSelectUnitAmmo\n\n// Danger Level Code\nra3_1.12.game+438ED0: \njmp MustCode+35b\nnop\n_BackDangerLevel:\n\nMustCode+35b:\nmov eax,[ecx+00001278]\npushfd\npushad\ncmp byte ptr [iEnable+13],01\ndb 75 07\nmov [eax+08],0000c350\ncmp byte ptr [iEnable+13],02\ndb 75 07\nmov [eax+08],00000000\npopad\npopfd\njmp _BackDangerLevel\n\n// Restore OreMine Code\nra3_1.12.game+2D4933: \njmp MustCode+394\nnop\n_BackRestoreOreMine:\n\nMustCode+394:\nmov [eax+8],#100000\nmov eax,[eax+08]\npushfd\npushad\ncmp ebx,00\ndb 75 17\ncmp byte ptr [iEnable+14],01\ndb 75 0e\nmov byte ptr [iEnable+14],00\nmov [ecx+14],00000000\npopad\npopfd\nsub eax,[ecx+14]\njmp _BackRestoreOreMine\n\n// Enemy Can't Build Code\nra3_1.12.game+30F530:  \njmp MustCode+3d0\n_BackEnemyCantBuild:\n\nMustCode+3d0:\npushfd\npushad\ncmp byte ptr [iEnable+15],00\ndb 75 12\nmov ecx,[ID+4]\ncmp [eax+0c],ecx\ndb 74 07\nmov [eax+04],00001388\ncmp byte ptr [iEnable+15],01\ndb 75 12\nmov ecx,[ID+4]\ncmp [eax+0c],ecx\ndb 74 07\nmov [eax+04],00000001\npopad\npopfd\nadd edx,[eax+04]\ncmp edx,edi\njmp _BackEnemyCantBuild\n\n// Player God Mode Code\nra3_1.12.game+12EEDF:  \njmp MustCode+41e\n_BackPlayerGodMode:\n\nMustCode+41e:\npushfd\npushad\ncmp byte ptr [iEnable+16],1\ndb 75 22\nmov ecx,[ebx+138]\nmov edi,[ecx+418]\ncmp edi,[ID]\ndb 75 0e\nmov [esi+4],497423f0\nmov [esi+c],497423f0\npopad\npopfd\nmov edx,[eax+3c]\nmov ecx,esi\njmp _BackPlayerGodMode\n\n// Player One Kill It Mode Code\nra3_1.12.game+3651AE:\njmp MustCode+461\n_BackPlayerOneKillItMode:\n\nMustCode+461:\npush eax\ncmp esi,[ID+10]         \njne _ExitPlayerOneKillItMode                \nmov eax,[esi-08]           \nor eax,eax                 \njz _ExitPlayerOneKillItMode                \npush ebx\nmov ebx,[eax+00000390]     \nor  ebx,[eax+00000394]     \nor  ebx,[eax+000003a0]     \nor  ebx,[eax+000003ac]     \npop ebx\njz _ExitPlayerOneKillItMode \ncmp byte ptr [iEnable+17],1\njne _ExitPlayerOneKillItMode \nmov eax,[eax+00000418]     \nmov eax,[eax+20]           \ncmp eax,[ID+4]        \nje _ExitPlayerOneKillItMode\nmov [ID+8],esi                  \nsub eax,eax     \nmov [esi+04],eax           \nmov [esi+0c],eax                       \nmovss xmm0,[esi+0c] \n_ExitPlayerOneKillItMode:       \nmovss [esi+04],xmm0       \npop eax\ntest eax,eax               \njmp _BackPlayerOneKillItMode\n             \nra3_1.12.game+3FE714:\njmp MustCode+4e5\nnop\n_BackPlayerOneKillItModeData:\n\nMustCode+4e5:\nmov ecx,[esi+0000033c]     \nmov [ID+C],esi            \nmov [ID+10],ecx          \njmp _BackPlayerOneKillItModeData\n\nra3_1.12.game+2E24E3:\njmp MustCode+506\nnop\n_BackPlayerOneKillItModeData2:\n\nMustCode+506:    \nmov [ID+C],ecx            \nmov ecx,[ecx+0000033c] \nmov [ID+10],ecx          \njmp _BackPlayerOneKillItModeData2 \n\nMustCode+600:\npushad\ncall MustCode+700\npopad\nxor eax,eax\nmov [iEnable+20],eax\njmp _BackPlayerMoney\n\nMustCode+700:\nmov eax,[iEnable+20]\ncmp eax,1           \nje MustCode2           //if eax = 1 , Jmp SelectUnitMAXSpeed Code or Exit\ncmp eax,2\nje MustCode2+100       //if eax = 2 , Jmp SelectUnitSlowSpeed Code or Exit\ncmp eax,3\nje MustCode2+200       //if eax = 3 , Jmp SelectUnitFreeze Code or Exit\ncmp eax,4\nje MustCode2+300       //if eax = 4 , Jmp RestoreSelectUnitSpeed Code or Exit\ncmp eax,5\nje MustCode2+400       //if eax = 5 , Jmp SelectUnitHpMax Code or Exit\ncmp eax,6\nje MustCode2+500       //if eax = 6 , Jmp SelectUnitHpMin Code or Exit\ncmp eax,7\nje MustCode2+600       //if eax = 7 , Jmp SelectUnitHpNormal Code or Exit\ncmp eax,8\nje MustCode2+700       //if eax = 8 , Jmp SelectUnitLevelUp Code or Exit\ncmp eax,9\nje MustCode2+800       //if eax = 9 , Jmp ChangeSelectUnit ID Code or Exit\ncmp eax,A\nje MustCode2+900       //if eax = A , Jmp DestroySelectUnit Code or Exit\ncmp eax,B\nje MustCode2+A00       //if eax = B , Jmp GetMeBase Code or Exit\ncmp eax,C\nje MustCode2+B00       //if eax = C , Jmp We need Back Code or Exit\ncmp eax,D               \nje MustCode2+c00       //if eax = D , Jmp Select Unit Copy For Me Code or Exit\nret\n\n//call SelectUnitLevelUp Code\nMustCode+800:\nmov ecx,eax\npush 0\npush 1\npush 3\ncall ra3_1.12.game+35C200\nret\n\n//call KillSelectUnit Code\nMustCode+900:\nmov ecx,eax\npush 0\npush 19\npush 6\ncall ra3_1.12.game+39EA50\nret\n\n//Call GetUnitData Code\nMustCode+A00:\nmov eax,[ra3_1.12.game+8DB73C]\nmov eax,[eax+5c]\ntest eax,eax\ndb 75 04\nadd esp,4\nret\nmov eax,[ra3_1.12.game+8DB73C]\nmov eax,[eax+50]\nmov eax,[eax+8]\nmov esi,[eax+138]\ntest esi,esi\ndb 75 04\nadd esp,4\nret\nmov [MustCode+1000],esi\nmov eax,[esi+38]\nmov [MustCode+1080],eax\nmov eax,[esi+3c]\nmov [MustCode+1084],eax\nmov eax,[esi+40]\nmov [MustCode+1088],eax\nmov eax,[esi+4]\nmov [MustCode+1020],eax\nmov eax,[esi+418]\nmov [MustCode+1040],eax\nret\n\n//Call GetUnitData2 Code\nMustCode+A60:\npush eax\nmov ecx,[ra3_1.12.game+8E6C58]\ncall ra3_1.12.game+3E4230\nmov [MustCode+1020],eax\nret\n\n//Call CreateUnit Code\nMustCode+AA0:\nmov ecx,[MustCode+1020]\ntest ecx,ecx\ndb 75 01\nret\nmov eax,[MustCode+1040]\nmov ebx,[eax+10]\npush ebx\npush eax\nlea eax,[MustCode+1080]\npush eax\npush ecx\npush 0\ncall ra3_1.12.game+205240\nadd esp,14\nret\n\n//Call SetUnitState Code\nMustCode+B00:\nor [eax+bc],80000000\nor [eax+c8],00000800\nret\n\n//Call GetMouseXYZinMap Code\nMustcode+1120:\nmov eax,[Ra3_1.12.game+8daefc]\nmov ebx,[eax+3c]\nmov [Mustcode+1110],ebx\nmov ebx,[eax+40]\nmov [Mustcode+1114],ebx\nmov ebx,[eax+44]\nmov [Mustcode+111c],ebx\npush 0\npush 0\nlea eax,[Mustcode+1080]\npush eax\nlea eax,[Mustcode+1110]\npush eax\ncall Ra3_1.12.game+1ed4a0\nadd esp,10\nret \n\nMustcode+1200:\nmov eax,[Ra3_1.12.game+e7565]\nret\n\n//SelectUnitSuperSpeed Code\nMustCode2:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+11:\nmov ebx,[edi+8]\nmov eax,[ebx+138]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+374]\nmov eax,[eax+200]\ntest eax,eax\ndb 75 01\nret\nmov ebx,[eax]\ncmp [ebx+8],43fa0000\ndb 74 23\ncmp [ebx+8],41200000\ndb 74 13\ncmp [ebx+8],00000000\ndb 74 0a\nmovss xmm0,[ebx+8]\nmovss [ebx+40],xmm0\nmov [ebx+8],43fa0000 //float_500\ntest ebx,ebx\ndb 75 01\nret\nmov eax,[eax+4]\ncmp [eax+18],3f800000\ndb 75 2c\ncmp [eax+8],43fa0000\ndb 74 23\ncmp [eax+8],41200000\ndb 74 13\ncmp [eax+8],00000000\ndb 74 0a\nmovss xmm1,[eax+8]\nmovss [eax+40],xmm1\nmov [eax+8],43fa0000 //float_500\nMustCode2+9B:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+11\n\n//SelectUnitSlowSpeed Code\nMustCode2+100:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+111:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+374]\nmov eax,[eax+200]\ntest eax,eax\ndb 75 01\nret\nmov ebx,[eax]\ncmp [ebx+8],43fa0000\ndb 74 1c\ncmp [ebx+8],41200000\ndb 74 1a\ncmp [ebx+8],00000000\ndb 74 0a\nmovss xmm0,[ebx+8]\nmovss [ebx+40],xmm0\nmov [ebx+8],41200000 //float_10\ntest ebx,ebx\ndb 75 01\nret\nmov eax,[eax+4]\ncmp [eax+18],3f800000\ndb 75 2c\ncmp [eax+8],43fa0000\ndb 74 1c\ncmp [eax+8],41200000\ndb 74 1a\ncmp [eax+8],00000000\ndb 74 0a\nmovss xmm1,[eax+8]\nmovss [eax+40],xmm1\nmov [eax+8],41200000 //float_10\nMustCode2+19b:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+111\n\n//SelectUnitFreeze Code\nMustCode2+200:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+211:\nmov ebx,[edi+8]\nmov eax,[ebx+138]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+374]\nmov eax,[eax+200]\ntest eax,eax\ndb 75 01\nret\nmov ebx,[eax]\ncmp [ebx+8],43fa0000\ndb 74 1c\ncmp [ebx+8],41200000\ndb 74 13\ncmp [ebx+8],00000000\ndb 74 11\nmovss xmm0,[ebx+8]\nmovss [ebx+40],xmm0\nmov [ebx+8],00000000 //float_0\ntest ebx,ebx\ndb 75 01\nret\nmov eax,[eax+4]\ncmp [eax+18],3f800000\ndb 75 2c\ncmp [eax+8],43fa0000\ndb 74 1c\ncmp [eax+8],41200000\ndb 74 13\ncmp [eax+8],00000000\ndb 74 11\nmovss xmm1,[eax+8]\nmovss [eax+40],xmm1\nmov [eax+8],00000000 //float_0\nMustCode2+29b:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+211\n\n//RestoreSelectUnitSpeed Code\nMustCode2+300:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+311:\nmov ebx,[edi+8]\nmov eax,[ebx+138]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+374]\nmov eax,[eax+200]\ntest eax,eax\ndb 75 01\nret\nmov ebx,[eax]\ncmp [ebx+8],43fa0000\ndb 74 14\ncmp [ebx+8],41200000\ndb 74 0b\ncmp [ebx+8],00000000\ndb 74 02\ndb eb 0a\nmovss xmm0,[ebx+40]\nmovss [ebx+8],xmm0\ntest ebx,ebx\ndb 75 01\nret\nmov eax,[eax+4]\ncmp [eax+18],3f800000\ndb 75 27\ncmp [eax+8],43fa0000\ndb 74 14\ncmp [eax+8],41200000\ndb 74 0b\ncmp [eax+8],00000000\ndb 74 02\ndb eb 0a\nmovss xmm1,[eax+40]\nmovss [eax+8],xmm1\nMustCode2+391:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+311\n\n//SelectUnitHpMax Code\nMustCode2+400:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+411:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\nmov eax,[ebx+33c]\ntest eax,eax\ndb 75 01\nret\nmov [eax+4],497423f0 //float_9999999\nmov [eax+c],497423f0 \nMustCode2+433:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+411\n\n//SelectUnitHpMin Code\nMustCode2+500:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+511:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\nmov eax,[ebx+33c]\ntest eax,eax\ndb 75 01\nret\nmov [eax+4],3F800000 //float_1 \nMustCode2+52c:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+511\n\n//SelectUnitHpNormal Code\nMustCode2+600:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+611:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\nmov eax,[ebx+33c]\ntest eax,eax\ndb 75 01\nret\nmov edx,[eax+10]\nmov [eax+4],edx \nmov [eax+c],edx\nMustCode2+62e:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+611\n\n//SelectUnitLevelUp Code\nMustCode2+700:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\nmov [MustCode+1100],ecx \nmov edi,[esi+50]\ntest ecx,ecx\njne MustCode2+720\nret\n\nMustCode2+720:\ntest ecx,ecx  \ndb 75 01\nret\nmov ebx,[edi+8]\ntest ebx,ebx\ndb 75 01\nret\nmov ebx,[ebx+138]\nmov eax,[ebx+3cc]\nSelectUnitLevelUp\ndec [MustCode+1100]\nmov ecx,[MustCode+1100]\nmov edi,[edi] \njmp MustCode2+720\n\n//ChangeSelectUnitID Code\nMustCode2+800:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+811:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\ntest ebx,ebx\ndb 75 01\nret\ncmp [ra3_1.12.game+8E9838],95D6E965\ndb 74 47\ncmp [ra3_1.12.game+8E9838],FD87E82A\ndb 74 3b\ncmp [ra3_1.12.game+8E9838],856C9DD6\ndb 74 2f\ncmp [ra3_1.12.game+8E9838],D20552E1\ndb 74 23\ncmp [ra3_1.12.game+8E9838],1AFC9A6E\ndb 74 17\ncmp [ra3_1.12.game+8E9838],D6D22475\ndb 74 0b\nmov eax,[ID]\nmov [ebx+418],eax\nMustCode2+872:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+811\n\n//DestroySelectUnit Code\nMustCode2+900:\nmov esi,[ra3_1.12.game+8DB73C]\nmov eax,[esi+5c]\ntest eax,eax\ndb 75 01\nret\nmov edi,[esi+54]\nmov eax,[edi+8]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+138]\nDestroySelectUnit\nret\n\n//GetMeBase Code\nMustCode2+A00:\nGetMouseXYZinMap\nmov eax,[ID]\nmov [MustCode+1040],eax\nmov eax,28DA574E\nGetUnitData2\nCreateUnit\nmov eax,AF4C0DA5\nGetUnitData2\nCreateUnit\nmov eax,1C2EF767 \nGetUnitData2\nCreateUnit\nret\n\n//We Need Back Code\nMustCode2+B00:\nGetMouseXYZinMap\nmov eax,[ID]\nmov [MustCode+1040],eax\nmov eax,[iEnable+24]\nGetUnitData2\ntest eax,eax\ndb 75 01\nret\nmov [MustCode+1020],eax\npush 08\npop eax\nmov [MustCode+1100],eax\njmp MustCode2+B33\n\nMustCode2+B33:\nmov eax,[MustCode+1100]\ntest eax,eax\ndb 75 01\nret\nCreateUnit\nSetUnitState\nmov eax,[eax+3cc]\nSelectUnitLevelUp\ndec [MustCode+1100]\njmp MustCode2+B33\n\n// Copy For Me Code \nMustCode2+c00:\nGetMouseXYZinMap\nmov eax,[ID]\nmov [MustCode+1040],eax\nmov eax,[ra3_1.12.game+8E9838]\nGetUnitData2\nCreateUnit\nret\n\n[disable]\n//=========================================\n// Original Codes\n\nra3_1.12.game+FF95B: \nmov edx,[eax+28]\nmov eax,[edx+20]\n\nra3_1.12.game+6CFDFE: \nadd edi,[eax+04]\nmov edx,[ecx]\n\nra3_1.12.game+6CFD0D: \nmov eax,[eax+04]\nmov ecx,[esi+000003b0]\n\nra3_1.12.game+6CFE6C: \nmov edi,[eax+34]\nmov ecx,[esi+3c]\n\nra3_1.12.game+6CFEB5: \nmovss xmm0,[edi+2c]\n\nra3_1.12.game+30F42E: \ncvttss2si eax,[esi+1c]\n\nra3_1.12.game+30F38C: \nfld dword ptr [esi+1c]\nmov [esi+5c],eax\n\nra3_1.12.game+2F6CFF: \nfld dword ptr [esi+000001bc]\n\nra3_1.12.game+2EBB69: \nmov ebx,[eax+00000418]\n\nra3_1.12.game+43EC19: \nmov esi,[eax+50]\nmov eax,[ecx]\n\nra3_1.12.game+43ECA6: \nmov edx,[ecx+50]\ncmp edx,[eax+0c]\n\nra3_1.12.game+30A5F6: \nmov ecx,[eax+50]\ncmp ecx,[esi+20]\n\nra3_1.12.game+1EC7CD: \nmovss [esi+44],xmm0\n\nra3_1.12.game+3C226C:\nmovss [ebp+00000260],xmm0\n\nra3_1.12.game+128735: \nmov ecx,[edx+edi*4]\ntest ecx,ecx\n\nra3_1.12.game+438ED0: \nmov eax,[ecx+00001278]\n\nra3_1.12.game+2D4933: \nmov eax,[eax+08]\nsub eax,[ecx+14]\n\nra3_1.12.game+30F530: \nadd edx,[eax+04]\ncmp edx,edi\n\nra3_1.12.game+12EEDF: \nmov edx,[eax+3c]\nmov ecx,esi\n\nra3_1.12.game+3651AE: \nmovss [esi+04],xmm0\n\nra3_1.12.game+3FE714:\nmov ecx,[esi+0000033c]\n\nra3_1.12.game+2E24E3:\nmov ecx,[ecx+0000033c]"
+    },
+    {
+      "offset": 597380,
+      "size": 57,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "Power",
+      "preview": "[ENABLE]\niEnable+9:\ndb 01\n[disable]\niEnable+9:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+9:\ndb 01\n[disable]\niEnable+9:\ndb 00"
+    },
+    {
+      "offset": 597508,
+      "size": 57,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "SC POINT",
+      "preview": "[ENABLE]\niEnable+A:\ndb 01\n[disable]\niEnable+A:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+A:\ndb 01\n[disable]\niEnable+A:\ndb 00"
+    },
+    {
+      "offset": 597639,
+      "size": 57,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "HAVE ALL SC",
+      "preview": "[ENABLE]\niEnable+B:\ndb 01\n[disable]\niEnable+B:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+B:\ndb 01\n[disable]\niEnable+B:\ndb 00"
+    },
+    {
+      "offset": 597769,
+      "size": 57,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "FAST BUILD",
+      "preview": "[ENABLE]\niEnable+C:\ndb 01\n[disable]\niEnable+C:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+C:\ndb 01\n[disable]\niEnable+C:\ndb 00"
+    },
+    {
+      "offset": 597900,
+      "size": 57,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "SUPER POWER",
+      "preview": "[ENABLE]\niEnable+D:\ndb 01\n[disable]\niEnable+D:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+D:\ndb 01\n[disable]\niEnable+D:\ndb 00"
+    },
+    {
+      "offset": 598034,
+      "size": 57,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "Disable ALL SP",
+      "preview": "[ENABLE]\niEnable+E:\ndb 01\n[disable]\niEnable+E:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+E:\ndb 01\n[disable]\niEnable+E:\ndb 00"
+    },
+    {
+      "offset": 598158,
+      "size": 97,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "Zoom",
+      "preview": "[ENABLE]\niEnable+F:\ndb 01\niEnable+10:\ndb 01\n[disable]\niEnable+F:\ndb 00\niEnable+10:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+F:\ndb 01\niEnable+10:\ndb 01\n[disable]\niEnable+F:\ndb 00\niEnable+10:\ndb 00"
+    },
+    {
+      "offset": 598321,
+      "size": 59,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "MAP",
+      "preview": "[ENABLE]\niEnable+11:\ndb 01\n[disable]\niEnable+11:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+11:\ndb 01\n[disable]\niEnable+11:\ndb 00"
+    },
+    {
+      "offset": 598461,
+      "size": 59,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "Enemy Can't Build",
+      "preview": "[ENABLE]\niEnable+15:\ndb 01\n[disable]\niEnable+15:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+15:\ndb 01\n[disable]\niEnable+15:\ndb 00"
+    },
+    {
+      "offset": 598599,
+      "size": 59,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "Player God Mode",
+      "preview": "[ENABLE]\niEnable+16:\ndb 01\n[disable]\niEnable+16:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+16:\ndb 01\n[disable]\niEnable+16:\ndb 00"
+    },
+    {
+      "offset": 598742,
+      "size": 59,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "Player One Kill Mode",
+      "preview": "[ENABLE]\niEnable+17:\ndb 01\n[disable]\niEnable+17:\ndb 00",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\niEnable+17:\ndb 01\n[disable]\niEnable+17:\ndb 00"
+    },
+    {
+      "offset": 600394,
+      "size": 75,
+      "encoding": "progressive_xor_index_plus_one",
+      "feature_name": "Free Build",
+      "preview": "[ENABLE]\n[MustCode+1201]:\ndb eb 0c\n[disable]\n[MustCode+1201]:\ndb 75 0c",
+      "summary": {
+        "globalalloc": [],
+        "define": [],
+        "label": [],
+        "hooks": []
+      },
+      "script": "[ENABLE]\n[MustCode+1201]:\ndb eb 0c\n[disable]\n[MustCode+1201]:\ndb 75 0c"
+    }
+  ],
+  "patch_manifest": {
+    "hooks": [
+      {
+        "address": "ra3_1.12.game+FF95B",
+        "section_title": "Script Only Work For Cheat Engine 5.5.",
+        "patch_assembly": [
+          "jmp MustCode",
+          "nop"
+        ],
+        "trampoline_target": "MustCode",
+        "return_label": "_BackPlayerID",
+        "enable_flags": [],
+        "original_assembly": [
+          "mov edx,[eax+28]",
+          "mov eax,[edx+20]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+6CFDFE",
+        "section_title": "Player Money Code",
+        "patch_assembly": [
+          "jmp MustCode+29"
+        ],
+        "trampoline_target": "MustCode+29",
+        "return_label": "_BackPlayerMoney",
+        "enable_flags": [
+          "iEnable+8"
+        ],
+        "original_assembly": [
+          "add edi,[eax+04]",
+          "mov edx,[ecx]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+6CFD0D",
+        "section_title": "Player Power Code",
+        "patch_assembly": [
+          "jmp MustCode+6c",
+          "nop",
+          "nop",
+          "nop",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+6c",
+        "return_label": "_BackPlayerPower",
+        "enable_flags": [
+          "iEnable+9"
+        ],
+        "original_assembly": [
+          "mov eax,[eax+04]",
+          "mov ecx,[esi+000003b0]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+6CFE6C",
+        "section_title": "Player SCPoints Code",
+        "patch_assembly": [
+          "jmp MustCode+9F",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+9F",
+        "return_label": "_BackPlayerSCPoint",
+        "enable_flags": [
+          "iEnable+A"
+        ],
+        "original_assembly": [
+          "mov edi,[eax+34]",
+          "mov ecx,[esi+3c]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+6CFEB5",
+        "section_title": "Player Have All SC Code",
+        "patch_assembly": [
+          "jmp MustCode+c8"
+        ],
+        "trampoline_target": "MustCode+c8",
+        "return_label": "_BackPlayerHaveAllSC",
+        "enable_flags": [
+          "iEnable+B"
+        ],
+        "original_assembly": [
+          "movss xmm0,[edi+2c]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+30F42E",
+        "section_title": "Player Fast Build 1 Code",
+        "patch_assembly": [
+          "jmp MustCode+f0"
+        ],
+        "trampoline_target": "MustCode+f0",
+        "return_label": "_BackPlayerFastBuild",
+        "enable_flags": [
+          "iEnable+C"
+        ],
+        "original_assembly": [
+          "cvttss2si eax,[esi+1c]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+30F38C",
+        "section_title": "Player Fast Build 2 Code",
+        "patch_assembly": [
+          "jmp MustCode+118",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+118",
+        "return_label": "_BackPlayerFastBuild2",
+        "enable_flags": [
+          "iEnable+C"
+        ],
+        "original_assembly": [
+          "fld dword ptr [esi+1c]",
+          "mov [esi+5c],eax"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+2F6CFF",
+        "section_title": "Player Fast Build 3 Code",
+        "patch_assembly": [
+          "jmp MustCode+141",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+141",
+        "return_label": "_BackPlayerFastBuild3",
+        "enable_flags": [
+          "iEnable+C"
+        ],
+        "original_assembly": [
+          "fld dword ptr [esi+000001bc]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+2EBB69",
+        "section_title": "Player Super Power Code",
+        "patch_assembly": [
+          "jmp MustCode+175",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+175",
+        "return_label": "_BackPlayerSuperPower",
+        "enable_flags": [
+          "iEnable+D",
+          "iEnable+E"
+        ],
+        "original_assembly": [
+          "mov ebx,[eax+00000418]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+43EC19",
+        "section_title": "Player Super Power 2 Code",
+        "patch_assembly": [
+          "jmp MustCode+1ca"
+        ],
+        "trampoline_target": "MustCode+1ca",
+        "return_label": "_BackPlayerSuperPower2",
+        "enable_flags": [
+          "iEnable+D",
+          "iEnable+E"
+        ],
+        "original_assembly": [
+          "mov esi,[eax+50]",
+          "mov eax,[ecx]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+43ECA6",
+        "section_title": "Disable All Super Power Code",
+        "patch_assembly": [
+          "jmp MustCode+250",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+250",
+        "return_label": "_BackDisableAllSuperPower",
+        "enable_flags": [
+          "iEnable+E"
+        ],
+        "original_assembly": [
+          "mov edx,[ecx+50]",
+          "cmp edx,[eax+0c]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+30A5F6",
+        "section_title": "Disable All Super Power 2 Code",
+        "patch_assembly": [
+          "jmp MustCode+294",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+294",
+        "return_label": "_BackDisableAllSuperPower2",
+        "enable_flags": [
+          "iEnable+E"
+        ],
+        "original_assembly": [
+          "mov ecx,[eax+50]",
+          "cmp ecx,[esi+20]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+1EC7CD",
+        "section_title": "Player Zoom Code",
+        "patch_assembly": [
+          "jmp MustCode+2bd"
+        ],
+        "trampoline_target": "MustCode+2bd",
+        "return_label": "_BackPlayerZoom",
+        "enable_flags": [
+          "iEnable+F",
+          "iEnable+10"
+        ],
+        "original_assembly": [
+          "movss [esi+44],xmm0"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+3C226C",
+        "section_title": "Player Map Code",
+        "patch_assembly": [
+          "jmp MustCode+2f9",
+          "nop",
+          "nop",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+2f9",
+        "return_label": "_BackPlayerMap",
+        "enable_flags": [
+          "iEnable+11"
+        ],
+        "original_assembly": [
+          "movss [ebp+00000260],xmm0"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+128735",
+        "section_title": "Select Unit Ammo Code",
+        "patch_assembly": [
+          "jmp MustCode+327"
+        ],
+        "trampoline_target": "MustCode+327",
+        "return_label": "_BackSelectUnitAmmo",
+        "enable_flags": [
+          "iEnable+12"
+        ],
+        "original_assembly": [
+          "mov ecx,[edx+edi*4]",
+          "test ecx,ecx"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+438ED0",
+        "section_title": "Danger Level Code",
+        "patch_assembly": [
+          "jmp MustCode+35b",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+35b",
+        "return_label": "_BackDangerLevel",
+        "enable_flags": [
+          "iEnable+13"
+        ],
+        "original_assembly": [
+          "mov eax,[ecx+00001278]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+2D4933",
+        "section_title": "Restore OreMine Code",
+        "patch_assembly": [
+          "jmp MustCode+394",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+394",
+        "return_label": "_BackRestoreOreMine",
+        "enable_flags": [
+          "iEnable+14"
+        ],
+        "original_assembly": [
+          "mov eax,[eax+08]",
+          "sub eax,[ecx+14]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+30F530",
+        "section_title": "Enemy Can't Build Code",
+        "patch_assembly": [
+          "jmp MustCode+3d0"
+        ],
+        "trampoline_target": "MustCode+3d0",
+        "return_label": "_BackEnemyCantBuild",
+        "enable_flags": [
+          "iEnable+15"
+        ],
+        "original_assembly": [
+          "add edx,[eax+04]",
+          "cmp edx,edi"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+12EEDF",
+        "section_title": "Player God Mode Code",
+        "patch_assembly": [
+          "jmp MustCode+41e"
+        ],
+        "trampoline_target": "MustCode+41e",
+        "return_label": "_BackPlayerGodMode",
+        "enable_flags": [
+          "iEnable+16"
+        ],
+        "original_assembly": [
+          "mov edx,[eax+3c]",
+          "mov ecx,esi"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+3651AE",
+        "section_title": "Player One Kill It Mode Code",
+        "patch_assembly": [
+          "jmp MustCode+461"
+        ],
+        "trampoline_target": "MustCode+461",
+        "return_label": "_BackPlayerOneKillItMode",
+        "enable_flags": [
+          "iEnable+17"
+        ],
+        "original_assembly": [
+          "movss [esi+04],xmm0"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+3FE714",
+        "section_title": "Player One Kill It Mode Code",
+        "patch_assembly": [
+          "jmp MustCode+4e5",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+4e5",
+        "return_label": "_BackPlayerOneKillItModeData",
+        "enable_flags": [
+          "iEnable+17"
+        ],
+        "original_assembly": [
+          "mov ecx,[esi+0000033c]"
+        ]
+      },
+      {
+        "address": "ra3_1.12.game+2E24E3",
+        "section_title": "Player One Kill It Mode Code",
+        "patch_assembly": [
+          "jmp MustCode+506",
+          "nop"
+        ],
+        "trampoline_target": "MustCode+506",
+        "return_label": "_BackPlayerOneKillItModeData2",
+        "enable_flags": [
+          "iEnable+17"
+        ],
+        "original_assembly": [
+          "mov ecx,[ecx+0000033c]"
+        ]
+      }
+    ]
+  },
+  "action_dispatch": [
+    {
+      "value": "0x01",
+      "target": "MustCode2",
+      "description": "SelectUnitMAXSpeed"
+    },
+    {
+      "value": "0x02",
+      "target": "MustCode2+100",
+      "description": "SelectUnitSlowSpeed"
+    },
+    {
+      "value": "0x03",
+      "target": "MustCode2+200",
+      "description": "SelectUnitFreeze"
+    },
+    {
+      "value": "0x04",
+      "target": "MustCode2+300",
+      "description": "RestoreSelectUnitSpeed"
+    },
+    {
+      "value": "0x05",
+      "target": "MustCode2+400",
+      "description": "SelectUnitHpMax"
+    },
+    {
+      "value": "0x06",
+      "target": "MustCode2+500",
+      "description": "SelectUnitHpMin"
+    },
+    {
+      "value": "0x07",
+      "target": "MustCode2+600",
+      "description": "SelectUnitHpNormal"
+    },
+    {
+      "value": "0x08",
+      "target": "MustCode2+700",
+      "description": "SelectUnitLevelUp"
+    },
+    {
+      "value": "0x09",
+      "target": "MustCode2+800",
+      "description": "ChangeSelectUnit ID"
+    },
+    {
+      "value": "0x0A",
+      "target": "MustCode2+900",
+      "description": "DestroySelectUnit"
+    },
+    {
+      "value": "0x0B",
+      "target": "MustCode2+A00",
+      "description": "GetMeBase"
+    },
+    {
+      "value": "0x0C",
+      "target": "MustCode2+B00",
+      "description": "We need Back"
+    },
+    {
+      "value": "0x0D",
+      "target": "MustCode2+c00",
+      "description": "Select Unit Copy For Me"
+    }
+  ],
+  "code_sections": [
+    {
+      "title": "Player Money Code",
+      "entry_label": "ra3_1.12.game+6CFDFE",
+      "enable_flags": [
+        "iEnable+8"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+6CFDFE"
+      ],
+      "constants": [
+        {
+          "raw": "99999999",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+6CFDFE:     \njmp MustCode+29\n_BackPlayerMoney:\n\nMustCode+29:\nPushfd\nPushad\ncmp byte ptr [iEnable+8],01\ndb 75 0e\nmov byte ptr [iEnable+8],00\nadd [eax+04],#100000\nmov [eax+08],#99999999\nPopad\nPopfd\nadd edi,[eax+4]\nmov edx,[ecx]\nmov eax,[iEnable+20]\ntest eax,eax\njne MustCode+600\njmp _BackPlayerMoney"
+    },
+    {
+      "title": "Player Power Code",
+      "entry_label": "ra3_1.12.game+6CFD0D",
+      "enable_flags": [
+        "iEnable+9"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+6CFD0D"
+      ],
+      "constants": [
+        {
+          "raw": "000186A0",
+          "kind": "hex32"
+        },
+        {
+          "raw": "00000000",
+          "kind": "float32",
+          "value": 0.0
+        },
+        {
+          "raw": "000003B0",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+6CFD0D:\njmp MustCode+6c\nnop\nnop\nnop\nnop\n_BackPlayerPower:\n\nMustCode+6c:\nPushfd\nPushad\ncmp byte ptr [iEnable+9],01\ndb 75 0e\nmov [eax+04],000186A0\nmov [eax+08],00000000\nPopad\nPopfd\nmov eax,[eax+04]\nmov ecx,[esi+000003B0]\njmp _BackPlayerPower"
+    },
+    {
+      "title": "Player SCPoints Code",
+      "entry_label": "ra3_1.12.game+6CFE6C",
+      "enable_flags": [
+        "iEnable+A"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+6CFE6C"
+      ],
+      "constants": [
+        {
+          "raw": "0000000f",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+6CFE6C:\njmp MustCode+9F\nnop\n_BackPlayerSCPoint:\n\nMustCode+9F:\npushfd\npushad\ncmp byte ptr [iEnable+A],01\ndb 75 07\nmov [eax+34],0000000f\npopad\npopfd\nmov edi,[eax+34]\nmov ecx,[esi+3c]\njmp _BackPlayerSCPoint"
+    },
+    {
+      "title": "Player Have All SC Code",
+      "entry_label": "ra3_1.12.game+6CFEB5",
+      "enable_flags": [
+        "iEnable+B"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+6CFEB5"
+      ],
+      "constants": [
+        {
+          "raw": "43c78000",
+          "kind": "float32",
+          "value": 399.0
+        }
+      ],
+      "preview": "ra3_1.12.game+6CFEB5:\njmp MustCode+c8\n_BackPlayerHaveAllSC:\n\nMustCode+c8:\npushfd\npushad\ncmp byte ptr [iEnable+B],01\ndb 75 07\nmov [edi+2c],43c78000\npopad\npopfd\nmovss xmm0,[edi+2c]\njmp _BackPlayerHaveAllSC"
+    },
+    {
+      "title": "Player Fast Build 1 Code",
+      "entry_label": "ra3_1.12.game+30F42E",
+      "enable_flags": [
+        "iEnable+C"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+30F42E"
+      ],
+      "constants": [
+        {
+          "raw": "42c80000",
+          "kind": "float32",
+          "value": 100.0
+        }
+      ],
+      "preview": "ra3_1.12.game+30F42E:\njmp MustCode+f0\n_BackPlayerFastBuild:\n\nMustCode+f0:\npushfd\npushad\ncmp byte ptr [iEnable+C],01\ndb 75 07\nmov [esi+1c],42c80000\npopad\npopfd\ncvttss2si eax,[esi+1c]\njmp _BackPlayerFastBuild"
+    },
+    {
+      "title": "Player Fast Build 2 Code",
+      "entry_label": "ra3_1.12.game+30F38C",
+      "enable_flags": [
+        "iEnable+C"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+30F38C"
+      ],
+      "constants": [
+        {
+          "raw": "42c80000",
+          "kind": "float32",
+          "value": 100.0
+        }
+      ],
+      "preview": "ra3_1.12.game+30F38C:\njmp MustCode+118\nnop\n_BackPlayerFastBuild2:\n\nMustCode+118:\npushfd\npushad\ncmp byte ptr [iEnable+C],01\ndb 75 07\nmov [esi+1c],42c80000\npopad\npopfd\nfld dword ptr [esi+1c]\nmov [esi+5c],eax\njmp _BackPlayerFastBuild2"
+    },
+    {
+      "title": "Player Fast Build 3 Code",
+      "entry_label": "ra3_1.12.game+2F6CFF",
+      "enable_flags": [
+        "iEnable+C"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+2F6CFF"
+      ],
+      "constants": [
+        {
+          "raw": "000001bc",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+2F6CFF:   \njmp MustCode+141\nnop\n_BackPlayerFastBuild3:\n\nMustCode+141:\npushfd\npushad\ncmp byte ptr [iEnable+C],01\ndb 75 07\ncmp ebp,01\ndb 74 02\ndb eb 0d\npopad\npopfd\nfld dword ptr [esi+000001bc]\njmp _BackPlayerFastBuild3\npushad\nmov eax,[edi+3c]\ninc eax\nmov [edi+14],eax\npopad\ndb eb e8"
+    },
+    {
+      "title": "Player Super Power Code",
+      "entry_label": "ra3_1.12.game+2EBB69",
+      "enable_flags": [
+        "iEnable+D",
+        "iEnable+E"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+2EBB69"
+      ],
+      "constants": [
+        {
+          "raw": "00000418",
+          "kind": "hex32"
+        },
+        {
+          "raw": "00000001",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+2EBB69: \njmp MustCode+175\nnop\n_BackPlayerSuperPower:\n\nMustCode+175:\npushfd\npushad\ncmp byte ptr [iEnable+D],01\ndb 75 15\nmov ecx,[ID]\ncmp [eax+00000418],ecx\ndb 75 07\nmov [esi+20],00000001\ncmp byte ptr [iEnable+E],01\ndb 75 15\nmov ecx,[ID]\ncmp [eax+00000418],ecx\ndb 74 07\nadd [esi+20],00000001\npopad\npopfd\nmov ebx,[eax+00000418]\njmp _BackPlayerSuperPower"
+    },
+    {
+      "title": "Player Super Power 2 Code",
+      "entry_label": "ra3_1.12.game+43EC19",
+      "enable_flags": [
+        "iEnable+D",
+        "iEnable+E"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+43EC19"
+      ],
+      "constants": [
+        {
+          "raw": "00000000",
+          "kind": "float32",
+          "value": 0.0
+        }
+      ],
+      "preview": "ra3_1.12.game+43EC19:\njmp MustCode+1ca\n_BackPlayerSuperPower2:\n\nMustCode+1ca:\nmov esi,[eax+50]\nmov eax,[ecx]\npushfd\npushad\ncmp byte ptr [iEnable+D],01\ndb 75 2e \nmov ecx,[id]\ncmp [esp+28],ecx\ndb 75 22\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\ncmp byte ptr [iEnable+E],01\ndb 75 2e \nmov ecx,[id]\ncmp [esp+28],ecx\ndb 74 22\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\nmov eax,[eax]\nmov [eax+0c],00000000\n..."
+    },
+    {
+      "title": "Disable All Super Power Code",
+      "entry_label": "ra3_1.12.game+43ECA6",
+      "enable_flags": [
+        "iEnable+E"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+43ECA6"
+      ],
+      "constants": [
+        {
+          "raw": "00000001",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+43ECA6:  \njmp MustCode+250\nnop\n_BackDisableAllSuperPower:\n\nMustCode+250:\nmov edx,[ecx+50]\ncmp edx,[eax+0c]\npushfd\npushad\ncmp byte ptr [iEnable+E],01\ndb 75 22\nadd [eax+0c],00000001\nmov eax,[eax]\nadd [eax+0c],00000001\nmov eax,[eax]\nadd [eax+0c],00000001\nmov eax,[eax]\nadd [eax+0c],00000001\npopad\npopfd\njmp _BackDisableAllSuperPower"
+    },
+    {
+      "title": "Disable All Super Power 2 Code",
+      "entry_label": "ra3_1.12.game+30A5F6",
+      "enable_flags": [
+        "iEnable+E"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+30A5F6"
+      ],
+      "constants": [
+        {
+          "raw": "00000001",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+30A5F6:  \njmp MustCode+294\nnop\n_BackDisableAllSuperPower2:\n\nMustCode+294:\nmov ecx,[eax+50]\ncmp ecx,[esi+20]\npushfd\npushad\ncmp byte ptr [iEnable+E],01\ndb 75 07\nadd [esi+20],00000001\npopad\npopfd\njmp _BackDisableAllSuperPower2"
+    },
+    {
+      "title": "Player Zoom Code",
+      "entry_label": "ra3_1.12.game+1EC7CD",
+      "enable_flags": [
+        "iEnable+F",
+        "iEnable+10"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+1EC7CD"
+      ],
+      "constants": [],
+      "preview": "ra3_1.12.game+1EC7CD: \njmp MustCode+2bd\n_BackPlayerZoom:\n\nMustCode+2bd:\nmovss [esi+44],xmm0\ncmp byte ptr [iEnable+F],1\ndb 75 0b\njmp _BackPlayerZoom\nfadd dword ptr [esi+44]\nfstp dword ptr [esi+44]\ncmp byte ptr [iEnable+10],1\ndb 75 0b\njmp _BackPlayerZoom\nfsub dword ptr [esi+44]\nfstp dword ptr [esi+44]\njmp _BackPlayerZoom"
+    },
+    {
+      "title": "Player Map Code",
+      "entry_label": "ra3_1.12.game+3C226C",
+      "enable_flags": [
+        "iEnable+11"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+3C226C"
+      ],
+      "constants": [
+        {
+          "raw": "00000260",
+          "kind": "hex32"
+        },
+        {
+          "raw": "47c35000",
+          "kind": "float32",
+          "value": 100000.0
+        }
+      ],
+      "preview": "ra3_1.12.game+3C226C:\njmp MustCode+2f9\nnop\nnop\nnop\n_BackPlayerMap:\n\nMustCode+2f9:\nmovss [ebp+00000260],xmm0\npushfd\npushad\ncmp byte ptr [iEnable+11],01\ndb 75 0a\nmov [ebp+00000260],47c35000\npopad\npopfd\njmp _BackPlayerMap"
+    },
+    {
+      "title": "Select Unit Ammo Code",
+      "entry_label": "ra3_1.12.game+128735",
+      "enable_flags": [
+        "iEnable+12"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+128735"
+      ],
+      "constants": [
+        {
+          "raw": "00000000",
+          "kind": "float32",
+          "value": 0.0
+        },
+        {
+          "raw": "7FFFFFFF",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+128735:\njmp MustCode+327\n_BackSelectUnitAmmo:\n\nMustCode+327:\nmov ecx,[edx+edi*4]\ntest ecx,ecx\npushfd\npushad\ncmp byte ptr [iEnable+12],01\ndb 75 13\ncmp [ebp+3AC],00000000\ndb 74 07\nmov [ecx+1c],7FFFFFFF\npopad\npopfd\njmp _BackSelectUnitAmmo"
+    },
+    {
+      "title": "Danger Level Code",
+      "entry_label": "ra3_1.12.game+438ED0",
+      "enable_flags": [
+        "iEnable+13"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+438ED0"
+      ],
+      "constants": [
+        {
+          "raw": "00001278",
+          "kind": "hex32"
+        },
+        {
+          "raw": "0000c350",
+          "kind": "hex32"
+        },
+        {
+          "raw": "00000000",
+          "kind": "float32",
+          "value": 0.0
+        }
+      ],
+      "preview": "ra3_1.12.game+438ED0: \njmp MustCode+35b\nnop\n_BackDangerLevel:\n\nMustCode+35b:\nmov eax,[ecx+00001278]\npushfd\npushad\ncmp byte ptr [iEnable+13],01\ndb 75 07\nmov [eax+08],0000c350\ncmp byte ptr [iEnable+13],02\ndb 75 07\nmov [eax+08],00000000\npopad\npopfd\njmp _BackDangerLevel"
+    },
+    {
+      "title": "Restore OreMine Code",
+      "entry_label": "ra3_1.12.game+2D4933",
+      "enable_flags": [
+        "iEnable+14"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+2D4933"
+      ],
+      "constants": [
+        {
+          "raw": "00000000",
+          "kind": "float32",
+          "value": 0.0
+        }
+      ],
+      "preview": "ra3_1.12.game+2D4933: \njmp MustCode+394\nnop\n_BackRestoreOreMine:\n\nMustCode+394:\nmov [eax+8],#100000\nmov eax,[eax+08]\npushfd\npushad\ncmp ebx,00\ndb 75 17\ncmp byte ptr [iEnable+14],01\ndb 75 0e\nmov byte ptr [iEnable+14],00\nmov [ecx+14],00000000\npopad\npopfd\nsub eax,[ecx+14]\njmp _BackRestoreOreMine"
+    },
+    {
+      "title": "Enemy Can't Build Code",
+      "entry_label": "ra3_1.12.game+30F530",
+      "enable_flags": [
+        "iEnable+15"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+30F530"
+      ],
+      "constants": [
+        {
+          "raw": "00001388",
+          "kind": "hex32"
+        },
+        {
+          "raw": "00000001",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+30F530:  \njmp MustCode+3d0\n_BackEnemyCantBuild:\n\nMustCode+3d0:\npushfd\npushad\ncmp byte ptr [iEnable+15],00\ndb 75 12\nmov ecx,[ID+4]\ncmp [eax+0c],ecx\ndb 74 07\nmov [eax+04],00001388\ncmp byte ptr [iEnable+15],01\ndb 75 12\nmov ecx,[ID+4]\ncmp [eax+0c],ecx\ndb 74 07\nmov [eax+04],00000001\npopad\npopfd\nadd edx,[eax+04]\ncmp edx,edi\njmp _BackEnemyCantBuild"
+    },
+    {
+      "title": "Player God Mode Code",
+      "entry_label": "ra3_1.12.game+12EEDF",
+      "enable_flags": [
+        "iEnable+16"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+12EEDF"
+      ],
+      "constants": [
+        {
+          "raw": "497423f0",
+          "kind": "float32",
+          "value": 999999.0
+        }
+      ],
+      "preview": "ra3_1.12.game+12EEDF:  \njmp MustCode+41e\n_BackPlayerGodMode:\n\nMustCode+41e:\npushfd\npushad\ncmp byte ptr [iEnable+16],1\ndb 75 22\nmov ecx,[ebx+138]\nmov edi,[ecx+418]\ncmp edi,[ID]\ndb 75 0e\nmov [esi+4],497423f0\nmov [esi+c],497423f0\npopad\npopfd\nmov edx,[eax+3c]\nmov ecx,esi\njmp _BackPlayerGodMode"
+    },
+    {
+      "title": "Player One Kill It Mode Code",
+      "entry_label": "ra3_1.12.game+3651AE",
+      "enable_flags": [
+        "iEnable+17"
+      ],
+      "referenced_addresses": [
+        "ra3_1.12.game+3651AE",
+        "ra3_1.12.game+3FE714",
+        "ra3_1.12.game+2E24E3"
+      ],
+      "constants": [
+        {
+          "raw": "00000390",
+          "kind": "hex32"
+        },
+        {
+          "raw": "00000394",
+          "kind": "hex32"
+        },
+        {
+          "raw": "000003a0",
+          "kind": "hex32"
+        },
+        {
+          "raw": "000003ac",
+          "kind": "hex32"
+        },
+        {
+          "raw": "00000418",
+          "kind": "hex32"
+        },
+        {
+          "raw": "0000033c",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "ra3_1.12.game+3651AE:\njmp MustCode+461\n_BackPlayerOneKillItMode:\n\nMustCode+461:\npush eax\ncmp esi,[ID+10]         \njne _ExitPlayerOneKillItMode                \nmov eax,[esi-08]           \nor eax,eax                 \njz _ExitPlayerOneKillItMode                \npush ebx\nmov ebx,[eax+00000390]     \nor  ebx,[eax+00000394]     \nor  ebx,[eax+000003a0]     \nor  ebx,[eax+000003ac]     \npop ebx\njz _ExitPlayerOneKillItMode \ncmp byte ptr [iEnable+17],1\njne _ExitPlayerOneKillItMode \nmov eax,[eax+00000418]\n..."
+    },
+    {
+      "title": "call SelectUnitLevelUp Code",
+      "entry_label": "MustCode+800",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+35C200"
+      ],
+      "constants": [],
+      "preview": "MustCode+800:\nmov ecx,eax\npush 0\npush 1\npush 3\ncall ra3_1.12.game+35C200\nret"
+    },
+    {
+      "title": "call KillSelectUnit Code",
+      "entry_label": "MustCode+900",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+39EA50"
+      ],
+      "constants": [],
+      "preview": "MustCode+900:\nmov ecx,eax\npush 0\npush 19\npush 6\ncall ra3_1.12.game+39EA50\nret"
+    },
+    {
+      "title": "Call GetUnitData Code",
+      "entry_label": "MustCode+A00",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [],
+      "preview": "MustCode+A00:\nmov eax,[ra3_1.12.game+8DB73C]\nmov eax,[eax+5c]\ntest eax,eax\ndb 75 04\nadd esp,4\nret\nmov eax,[ra3_1.12.game+8DB73C]\nmov eax,[eax+50]\nmov eax,[eax+8]\nmov esi,[eax+138]\ntest esi,esi\ndb 75 04\nadd esp,4\nret\nmov [MustCode+1000],esi\nmov eax,[esi+38]\nmov [MustCode+1080],eax\nmov eax,[esi+3c]\nmov [MustCode+1084],eax\nmov eax,[esi+40]\nmov [MustCode+1088],eax\nmov eax,[esi+4]\nmov [MustCode+1020],eax\nmov eax,[esi+418]\nmov [MustCode+1040],eax\nret"
+    },
+    {
+      "title": "Call GetUnitData2 Code",
+      "entry_label": "MustCode+A60",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8E6C58",
+        "ra3_1.12.game+3E4230"
+      ],
+      "constants": [],
+      "preview": "MustCode+A60:\npush eax\nmov ecx,[ra3_1.12.game+8E6C58]\ncall ra3_1.12.game+3E4230\nmov [MustCode+1020],eax\nret"
+    },
+    {
+      "title": "Call CreateUnit Code",
+      "entry_label": "MustCode+AA0",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+205240"
+      ],
+      "constants": [],
+      "preview": "MustCode+AA0:\nmov ecx,[MustCode+1020]\ntest ecx,ecx\ndb 75 01\nret\nmov eax,[MustCode+1040]\nmov ebx,[eax+10]\npush ebx\npush eax\nlea eax,[MustCode+1080]\npush eax\npush ecx\npush 0\ncall ra3_1.12.game+205240\nadd esp,14\nret"
+    },
+    {
+      "title": "Call SetUnitState Code",
+      "entry_label": "MustCode+B00",
+      "enable_flags": [],
+      "referenced_addresses": [],
+      "constants": [
+        {
+          "raw": "80000000",
+          "kind": "hex32"
+        },
+        {
+          "raw": "00000800",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "MustCode+B00:\nor [eax+bc],80000000\nor [eax+c8],00000800\nret"
+    },
+    {
+      "title": "Call GetMouseXYZinMap Code",
+      "entry_label": "Mustcode+1120",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DAEFC",
+        "ra3_1.12.game+1ED4A0",
+        "ra3_1.12.game+E7565"
+      ],
+      "constants": [],
+      "preview": "Mustcode+1120:\nmov eax,[Ra3_1.12.game+8daefc]\nmov ebx,[eax+3c]\nmov [Mustcode+1110],ebx\nmov ebx,[eax+40]\nmov [Mustcode+1114],ebx\nmov ebx,[eax+44]\nmov [Mustcode+111c],ebx\npush 0\npush 0\nlea eax,[Mustcode+1080]\npush eax\nlea eax,[Mustcode+1110]\npush eax\ncall Ra3_1.12.game+1ed4a0\nadd esp,10\nret \n\nMustcode+1200:\nmov eax,[Ra3_1.12.game+e7565]\nret"
+    },
+    {
+      "title": "SelectUnitSuperSpeed Code",
+      "entry_label": "MustCode2",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [
+        {
+          "raw": "43fa0000",
+          "kind": "float32",
+          "value": 500.0
+        },
+        {
+          "raw": "41200000",
+          "kind": "float32",
+          "value": 10.0
+        },
+        {
+          "raw": "00000000",
+          "kind": "float32",
+          "value": 0.0
+        },
+        {
+          "raw": "3f800000",
+          "kind": "float32",
+          "value": 1.0
+        }
+      ],
+      "preview": "MustCode2:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+11:\nmov ebx,[edi+8]\nmov eax,[ebx+138]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+374]\nmov eax,[eax+200]\ntest eax,eax\ndb 75 01\nret\nmov ebx,[eax]\ncmp [ebx+8],43fa0000\ndb 74 23\ncmp [ebx+8],41200000\ndb 74 13\ncmp [ebx+8],00000000\ndb 74 0a\nmovss xmm0,[ebx+8]\nmovss [ebx+40],xmm0\nmov [ebx+8],43fa0000 //float_500\ntest ebx,ebx\ndb 75 01\nret\nmov eax,[eax+4]\ncmp [eax+18],3f800000\ndb 75 2c\ncmp [eax+8],4\n..."
+    },
+    {
+      "title": "SelectUnitSlowSpeed Code",
+      "entry_label": "MustCode2+100",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [
+        {
+          "raw": "43fa0000",
+          "kind": "float32",
+          "value": 500.0
+        },
+        {
+          "raw": "41200000",
+          "kind": "float32",
+          "value": 10.0
+        },
+        {
+          "raw": "00000000",
+          "kind": "float32",
+          "value": 0.0
+        },
+        {
+          "raw": "3f800000",
+          "kind": "float32",
+          "value": 1.0
+        }
+      ],
+      "preview": "MustCode2+100:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+111:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+374]\nmov eax,[eax+200]\ntest eax,eax\ndb 75 01\nret\nmov ebx,[eax]\ncmp [ebx+8],43fa0000\ndb 74 1c\ncmp [ebx+8],41200000\ndb 74 1a\ncmp [ebx+8],00000000\ndb 74 0a\nmovss xmm0,[ebx+8]\nmovss [ebx+40],xmm0\nmov [ebx+8],41200000 //float_10\ntest ebx,ebx\ndb 75 01\nret\nmov eax,[eax+4]\ncmp [eax+18],3f800000\ndb 75 2c\ncmp [eax+\n..."
+    },
+    {
+      "title": "SelectUnitFreeze Code",
+      "entry_label": "MustCode2+200",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [
+        {
+          "raw": "43fa0000",
+          "kind": "float32",
+          "value": 500.0
+        },
+        {
+          "raw": "41200000",
+          "kind": "float32",
+          "value": 10.0
+        },
+        {
+          "raw": "00000000",
+          "kind": "float32",
+          "value": 0.0
+        },
+        {
+          "raw": "3f800000",
+          "kind": "float32",
+          "value": 1.0
+        }
+      ],
+      "preview": "MustCode2+200:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+211:\nmov ebx,[edi+8]\nmov eax,[ebx+138]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+374]\nmov eax,[eax+200]\ntest eax,eax\ndb 75 01\nret\nmov ebx,[eax]\ncmp [ebx+8],43fa0000\ndb 74 1c\ncmp [ebx+8],41200000\ndb 74 13\ncmp [ebx+8],00000000\ndb 74 11\nmovss xmm0,[ebx+8]\nmovss [ebx+40],xmm0\nmov [ebx+8],00000000 //float_0\ntest ebx,ebx\ndb 75 01\nret\nmov eax,[eax+4]\ncmp [eax+18],3f800000\ndb 75 2c\ncmp [eax+8\n..."
+    },
+    {
+      "title": "RestoreSelectUnitSpeed Code",
+      "entry_label": "MustCode2+300",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [
+        {
+          "raw": "43fa0000",
+          "kind": "float32",
+          "value": 500.0
+        },
+        {
+          "raw": "41200000",
+          "kind": "float32",
+          "value": 10.0
+        },
+        {
+          "raw": "00000000",
+          "kind": "float32",
+          "value": 0.0
+        },
+        {
+          "raw": "3f800000",
+          "kind": "float32",
+          "value": 1.0
+        }
+      ],
+      "preview": "MustCode2+300:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+311:\nmov ebx,[edi+8]\nmov eax,[ebx+138]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+374]\nmov eax,[eax+200]\ntest eax,eax\ndb 75 01\nret\nmov ebx,[eax]\ncmp [ebx+8],43fa0000\ndb 74 14\ncmp [ebx+8],41200000\ndb 74 0b\ncmp [ebx+8],00000000\ndb 74 02\ndb eb 0a\nmovss xmm0,[ebx+40]\nmovss [ebx+8],xmm0\ntest ebx,ebx\ndb 75 01\nret\nmov eax,[eax+4]\ncmp [eax+18],3f800000\ndb 75 27\ncmp [eax+8],43fa0000\ndb 74 14\ncm\n..."
+    },
+    {
+      "title": "SelectUnitHpMax Code",
+      "entry_label": "MustCode2+400",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [
+        {
+          "raw": "497423f0",
+          "kind": "float32",
+          "value": 9999999.0
+        }
+      ],
+      "preview": "MustCode2+400:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+411:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\nmov eax,[ebx+33c]\ntest eax,eax\ndb 75 01\nret\nmov [eax+4],497423f0 //float_9999999\nmov [eax+c],497423f0 \nMustCode2+433:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+411"
+    },
+    {
+      "title": "SelectUnitHpMin Code",
+      "entry_label": "MustCode2+500",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [
+        {
+          "raw": "3F800000",
+          "kind": "float32",
+          "value": 1.0
+        }
+      ],
+      "preview": "MustCode2+500:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+511:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\nmov eax,[ebx+33c]\ntest eax,eax\ndb 75 01\nret\nmov [eax+4],3F800000 //float_1 \nMustCode2+52c:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+511"
+    },
+    {
+      "title": "SelectUnitHpNormal Code",
+      "entry_label": "MustCode2+600",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [],
+      "preview": "MustCode2+600:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+611:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\nmov eax,[ebx+33c]\ntest eax,eax\ndb 75 01\nret\nmov edx,[eax+10]\nmov [eax+4],edx \nmov [eax+c],edx\nMustCode2+62e:\ndec ecx\ndb 75 01\nret\nmov edi,[edi]\njmp MustCode2+611"
+    },
+    {
+      "title": "SelectUnitLevelUp Code",
+      "entry_label": "MustCode2+700",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [],
+      "preview": "MustCode2+700:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\nmov [MustCode+1100],ecx \nmov edi,[esi+50]\ntest ecx,ecx\njne MustCode2+720\nret\n\nMustCode2+720:\ntest ecx,ecx  \ndb 75 01\nret\nmov ebx,[edi+8]\ntest ebx,ebx\ndb 75 01\nret\nmov ebx,[ebx+138]\nmov eax,[ebx+3cc]\nSelectUnitLevelUp\ndec [MustCode+1100]\nmov ecx,[MustCode+1100]\nmov edi,[edi] \njmp MustCode2+720"
+    },
+    {
+      "title": "ChangeSelectUnitID Code",
+      "entry_label": "MustCode2+800",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C",
+        "ra3_1.12.game+8E9838"
+      ],
+      "constants": [
+        {
+          "raw": "95D6E965",
+          "kind": "hex32"
+        },
+        {
+          "raw": "FD87E82A",
+          "kind": "hex32"
+        },
+        {
+          "raw": "856C9DD6",
+          "kind": "hex32"
+        },
+        {
+          "raw": "D20552E1",
+          "kind": "hex32"
+        },
+        {
+          "raw": "1AFC9A6E",
+          "kind": "hex32"
+        },
+        {
+          "raw": "D6D22475",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "MustCode2+800:\nmov esi,[ra3_1.12.game+8DB73C]\nmov ecx,[esi+5c]\ntest ecx,ecx\ndb 75 01\nret\nmov edi,[esi+50]\nMustCode2+811:\nmov ebx,[edi+8]\nmov ebx,[ebx+138]\ntest ebx,ebx\ndb 75 01\nret\ncmp [ra3_1.12.game+8E9838],95D6E965\ndb 74 47\ncmp [ra3_1.12.game+8E9838],FD87E82A\ndb 74 3b\ncmp [ra3_1.12.game+8E9838],856C9DD6\ndb 74 2f\ncmp [ra3_1.12.game+8E9838],D20552E1\ndb 74 23\ncmp [ra3_1.12.game+8E9838],1AFC9A6E\ndb 74 17\ncmp [ra3_1.12.game+8E9838],D6D22475\ndb 74 0b\nmov eax,[ID]\nmov [ebx+418],eax\nMustCode2+872:\ndec\n..."
+    },
+    {
+      "title": "DestroySelectUnit Code",
+      "entry_label": "MustCode2+900",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8DB73C"
+      ],
+      "constants": [],
+      "preview": "MustCode2+900:\nmov esi,[ra3_1.12.game+8DB73C]\nmov eax,[esi+5c]\ntest eax,eax\ndb 75 01\nret\nmov edi,[esi+54]\nmov eax,[edi+8]\ntest eax,eax\ndb 75 01\nret\nmov eax,[eax+138]\nDestroySelectUnit\nret"
+    },
+    {
+      "title": "GetMeBase Code",
+      "entry_label": "MustCode2+A00",
+      "enable_flags": [],
+      "referenced_addresses": [],
+      "constants": [
+        {
+          "raw": "28DA574E",
+          "kind": "hex32"
+        },
+        {
+          "raw": "AF4C0DA5",
+          "kind": "hex32"
+        },
+        {
+          "raw": "1C2EF767",
+          "kind": "hex32"
+        }
+      ],
+      "preview": "MustCode2+A00:\nGetMouseXYZinMap\nmov eax,[ID]\nmov [MustCode+1040],eax\nmov eax,28DA574E\nGetUnitData2\nCreateUnit\nmov eax,AF4C0DA5\nGetUnitData2\nCreateUnit\nmov eax,1C2EF767 \nGetUnitData2\nCreateUnit\nret"
+    },
+    {
+      "title": "We Need Back Code",
+      "entry_label": "MustCode2+B00",
+      "enable_flags": [],
+      "referenced_addresses": [],
+      "constants": [],
+      "preview": "MustCode2+B00:\nGetMouseXYZinMap\nmov eax,[ID]\nmov [MustCode+1040],eax\nmov eax,[iEnable+24]\nGetUnitData2\ntest eax,eax\ndb 75 01\nret\nmov [MustCode+1020],eax\npush 08\npop eax\nmov [MustCode+1100],eax\njmp MustCode2+B33\n\nMustCode2+B33:\nmov eax,[MustCode+1100]\ntest eax,eax\ndb 75 01\nret\nCreateUnit\nSetUnitState\nmov eax,[eax+3cc]\nSelectUnitLevelUp\ndec [MustCode+1100]\njmp MustCode2+B33"
+    },
+    {
+      "title": "Copy For Me Code",
+      "entry_label": "MustCode2+c00",
+      "enable_flags": [],
+      "referenced_addresses": [
+        "ra3_1.12.game+8E9838"
+      ],
+      "constants": [],
+      "preview": "MustCode2+c00:\nGetMouseXYZinMap\nmov eax,[ID]\nmov [MustCode+1040],eax\nmov eax,[ra3_1.12.game+8E9838]\nGetUnitData2\nCreateUnit\nret"
+    }
+  ],
+  "decoded_blocks": [
+    {
+      "offset": 600907,
+      "size": 452,
+      "xor_key": "0x86",
+      "preview": "-* Command and Conquer (TM) Red Alert 3-* 31 Trainer -* Only For Multi2 Version 1.12.3444.25830 -* -* Version: Final.3 (3.3)-* -* Data: December, 31, 2009-*-* -*"
+    }
+  ]
+}
