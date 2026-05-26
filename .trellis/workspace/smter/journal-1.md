@@ -38,3 +38,36 @@
 ### Next Steps
 
 - None - task complete
+
+
+## Session 2: UI modernization: Catppuccin Mocha dark theme
+
+**Date**: 2026-05-26
+**Task**: UI modernization: Catppuccin Mocha dark theme
+**Branch**: `main`
+
+### Summary
+
+Designed and implemented Catppuccin Mocha dark theme system for RA3 Trainer WPF app. Created 4-layer theme architecture (raw colors → semantic tokens → implicit styles → XAML migration). Replaced all hardcoded hex colors across 3 XAML files with StaticResource references. Embedded Sarasa Mono SC font. Updated app specs. Fixed 3 runtime bugs: Window implicit style not applying, Color-as-Brush type mismatch in ControlTemplate triggers, font inheritance gaps.
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `a790d17` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete
