@@ -31,7 +31,7 @@
     <SolidColorBrush x:Key="WarningBrush" Color="{StaticResource Catppuccin.Peach}" />
 
     <!-- Input -->
-    <SolidColorBrush x:Key="InputBackgroundBrush" Color="{StaticResource Catppuccin.Surface0}" />
+    <SolidColorBrush x:Key="InputBackgroundBrush" Color="{StaticResource Catppuccin.Base}" />
     <SolidColorBrush x:Key="InputBorderBrush" Color="{StaticResource Catppuccin.Overlay0}" />
     <SolidColorBrush x:Key="InputFocusBorderBrush" Color="{StaticResource Catppuccin.Mauve}" />
 

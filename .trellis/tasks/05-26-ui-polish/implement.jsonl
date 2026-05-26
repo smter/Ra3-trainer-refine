@@ -1,0 +1,8 @@
+{"file": ".trellis/spec/app/index.md", "reason": "App 层规范索引：Views/ViewModels/Converters 目录结构、组件/状态管理规范入口"}
+{"file": ".trellis/spec/app/component-guidelines.md", "reason": "WPF 绑定模式、DataTemplate 分组显示、按钮样式分配规则、禁止模式清单"}
+{"file": ".trellis/spec/app/state-management.md", "reason": "ViewModel 模式：ViewModelBase、RelayCommand、OnPropertyChanged——加枚举属性时遵守"}
+{"file": ".trellis/spec/app/catppuccin.md", "reason": "Catppuccin Mocha 色板——Green/Success、Red/Error、Yellow/Warning 映射参考"}
+{"file": ".trellis/spec/app/quality-guidelines.md", "reason": "XAML 规范：控件属性顺序、命名空间组织、Converter 注册、Code-Behind 最小原则"}
+{"file": ".trellis/spec/core/index.md", "reason": "Core 层概述——确保不改动 Core 层代码"}
+{"file": ".trellis/tasks/05-26-ui-polish/prd.md", "reason": "需求：按钮层级化、DangerButtonStyle、状态语义色、布局重组、输入框层级、快捷键弱化"}
+{"file": ".trellis/tasks/05-26-ui-polish/design.md", "reason": "技术设计：ConnectionState 枚举、IsActive 属性、Converter 签名、按钮 Style 分配表、布局结构"}

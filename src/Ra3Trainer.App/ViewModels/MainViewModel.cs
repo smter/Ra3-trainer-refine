@@ -12,6 +12,13 @@ using Ra3Trainer.Core.Runtime;
 
 namespace Ra3Trainer.App.ViewModels;
 
+public enum ConnectionState
+{
+    Disconnected,
+    Connected,
+    Processing
+}
+
 public sealed class MainViewModel : ViewModelBase, IDisposable
 {
     private readonly TrainerManifest _manifest;
@@ -40,6 +47,17 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
     private bool _arePatchesInstalled;
     private bool _isBusy;
     private bool _isQueueRunning;
+    private ConnectionState _connectionState = ConnectionState.Disconnected;
+
+    public ConnectionState ConnectionState
+    {
+        get => _connectionState;
+        private set
+        {
+            _connectionState = value;
+            OnPropertyChanged();
+        }
+    }
 
     private MainViewModel(TrainerManifest manifest, TrainerAppSettingsStore settingsStore)
     {
@@ -263,10 +281,12 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
     public void RefreshProcess()
     {
         DisposeSession();
+        ConnectionState = ConnectionState.Processing;
         var target = _locator.Find(_manifest.TargetProcess);
         if (target is null)
         {
             StatusMessage = "未找到 ra3_1.12。";
+            ConnectionState = ConnectionState.Disconnected;
             RaiseCommandStates();
             return;
         }
@@ -282,6 +302,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         }
 
         IsBusy = true;
+        ConnectionState = ConnectionState.Processing;
         try
         {
             SaveLauncherSettings();
@@ -396,12 +417,14 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
                 FeatureController.WriteResourceValues(resourceValues);
             }
             ArePatchesInstalled = true;
+            ConnectionState = ConnectionState.Connected;
             StartHotkeys();
             StatusMessage = $"Patch 已安装，快捷键已启用。Hook={_session.InstalledHookCount}；{_session.RemoteSymbolSummary}";
             ReadSelectedUnitCodeCommand.RaiseCanExecuteChanged();
         }
         catch (Exception ex)
         {
+            ConnectionState = ConnectionState.Disconnected;
             StatusMessage = ex.Message;
         }
     }
@@ -411,6 +434,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         _session?.Dispose();
         FeatureController = null;
         ArePatchesInstalled = false;
+        ConnectionState = ConnectionState.Disconnected;
         StopHotkeys();
         StatusMessage = "Patch 已恢复。";
         ReadSelectedUnitCodeCommand.RaiseCanExecuteChanged();
@@ -608,6 +632,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
     {
         FeatureController = null;
         ArePatchesInstalled = false;
+        ConnectionState = ConnectionState.Disconnected;
         StopHotkeys();
         _session?.Dispose();
         _session = null;

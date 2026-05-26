@@ -24,6 +24,8 @@ public sealed class FeatureItemViewModel : ViewModelBase
 
     public string? Hotkey => Feature.Hotkey;
 
+    public bool IsActive => _enabled;
+
     public string ActionText => IsToggle ? (_enabled ? "关闭" : "开启") : "执行";
 
     public bool IsToggle => FeatureController.IsToggleFeature(Feature);
@@ -68,6 +70,7 @@ public sealed class FeatureItemViewModel : ViewModelBase
                 }
 
                 _enabled = nextEnabled;
+                OnPropertyChanged(nameof(IsActive));
                 controller.SetToggle(Feature, _enabled);
                 Status = _enabled ? "已启用" : "已关闭";
                 OnPropertyChanged(nameof(ActionText));

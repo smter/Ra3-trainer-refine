@@ -1,0 +1,8 @@
+{"file": ".trellis/spec/app/quality-guidelines.md", "reason": "审查基准：XAML 属性顺序、Code-Behind ≤15 行、ViewModel 不引用 System.Windows、禁止模式"}
+{"file": ".trellis/spec/app/component-guidelines.md", "reason": "验证按钮样式分配正确、绑定路径未损坏、DataTemplate 匹配、无 Click 事件处理器"}
+{"file": ".trellis/spec/app/state-management.md", "reason": "验证新增 ConnectionState/IsActive 属性符合 ViewModel 模式：PropertyChanged 通知、无 View 引用"}
+{"file": ".trellis/spec/app/catppuccin.md", "reason": "验证状态颜色映射：Red→ErrorBrush/#F38BA8, Green→SuccessBrush/#A6E3A1, Peach→WarningBrush/#FAB387"}
+{"file": ".trellis/spec/guides/index.md", "reason": "审查前必读：AI reviewer false-positive 模式、trust boundary 判断"}
+{"file": ".trellis/spec/guides/cross-layer-thinking-guide.md", "reason": "验证 App→Core 跨层边界：ViewModel 属性不调用 Core 读取方法"}
+{"file": ".trellis/tasks/05-26-ui-polish/prd.md", "reason": "验收标准核对：PrimaryButtonStyle 正确使用、DangerButton hover 红色、状态圆点、基础资源卡片独立、输入框可辨识、快捷键弱化"}
+{"file": ".trellis/tasks/05-26-ui-polish/design.md", "reason": "设计合规审查：ConnectionState 设置时机正确、按钮 Style 分配表一致、布局结构匹配"}

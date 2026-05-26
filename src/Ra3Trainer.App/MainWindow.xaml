@@ -1,16 +1,18 @@
 <Window x:Class="Ra3Trainer.App.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:converters="clr-namespace:Ra3Trainer.App.Converters"
         Title="RA3 Trainer" Height="720" Width="1080"
         MinHeight="560" MinWidth="860"
         Background="{StaticResource WindowBackgroundBrush}"
         FontFamily="{StaticResource AppFont}">
+  <Window.Resources>
+    <converters:ConnectionStateToBrushConverter x:Key="ConnectionStateToBrushConverter" />
+  </Window.Resources>
   <DockPanel>
     <Border DockPanel.Dock="Top" Background="{StaticResource TopBarBackgroundBrush}" Padding="16">
       <Grid>
         <Grid.RowDefinitions>
-          <RowDefinition Height="Auto" />
-          <RowDefinition Height="Auto" />
           <RowDefinition Height="Auto" />
           <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
@@ -20,12 +22,19 @@
         </Grid.ColumnDefinitions>
         <StackPanel>
           <TextBlock Text="RA3 Trainer" Foreground="{StaticResource TextPrimaryBrush}" FontSize="22" FontWeight="SemiBold" />
-          <TextBlock Text="{Binding StatusMessage}" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,4,0,0" />
+          <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+            <Ellipse Width="8" Height="8"
+                     Fill="{Binding ConnectionState, Converter={StaticResource ConnectionStateToBrushConverter}}"
+                     VerticalAlignment="Center" Margin="0,0,6,0" />
+            <TextBlock Text="{Binding StatusMessage}" Foreground="{StaticResource TextSecondaryBrush}" />
+          </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-          <Button Content="重新检测进程" Command="{Binding RefreshCommand}" Padding="12,8" Margin="0,0,8,0" />
+          <Button Content="重新检测进程" Command="{Binding RefreshCommand}"
+                  Style="{StaticResource PrimaryButtonStyle}" Padding="12,8" Margin="0,0,8,0" />
           <Button Content="安装 Patch" Command="{Binding InstallPatchesCommand}" Padding="12,8" Margin="0,0,8,0" />
-          <Button Content="恢复所有 Patch" Command="{Binding RestorePatchesCommand}" Padding="12,8" />
+          <Button Content="恢复所有 Patch" Command="{Binding RestorePatchesCommand}"
+                  Style="{StaticResource DangerButtonStyle}" Padding="12,8" />
         </StackPanel>
         <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="0,14,0,0">
           <Grid.ColumnDefinitions>
@@ -50,77 +59,45 @@
                    VerticalContentAlignment="Center" />
           <Button Grid.Column="4" Content="浏览" Command="{Binding BrowseLauncherCommand}" Padding="12,7" Margin="8,0,0,0" />
           <Button Grid.Column="5" Content="保存设置" Command="{Binding SaveLauncherSettingsCommand}" Padding="12,7" Margin="8,0,0,0" />
-          <Button Grid.Column="6" Content="一键启动并装载" Command="{Binding LaunchAndLoadCommand}" Padding="12,7" Margin="8,0,0,0" />
-        </Grid>
-        <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,10,0,0">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="120" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="120" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="80" />
-            <ColumnDefinition Width="*" />
-          </Grid.ColumnDefinitions>
-          <TextBlock Text="Money" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,8,0" />
-          <TextBox Grid.Column="1"
-                   Text="{Binding MoneyAmountText, UpdateSourceTrigger=PropertyChanged}"
-                   Padding="8,6"
-                   VerticalContentAlignment="Center" />
-          <TextBlock Grid.Column="2" Text="Power" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
-          <TextBox Grid.Column="3"
-                   Text="{Binding PowerValueText, UpdateSourceTrigger=PropertyChanged}"
-                   Padding="8,6"
-                   VerticalContentAlignment="Center" />
-          <TextBlock Grid.Column="4" Text="SC Point" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
-          <TextBox Grid.Column="5"
-                   Text="{Binding ScPointValueText, UpdateSourceTrigger=PropertyChanged}"
-                   Padding="8,6"
-                   VerticalContentAlignment="Center" />
-        </Grid>
-        <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="0,10,0,0">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="150" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="72" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="72" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-          </Grid.ColumnDefinitions>
-          <TextBlock Text="增援单位ID" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,8,0" />
-          <TextBox Grid.Column="1"
-                   Text="{Binding ReinforcementUnitIdText, UpdateSourceTrigger=PropertyChanged}"
-                   Padding="8,6"
-                   VerticalContentAlignment="Center" />
-          <TextBlock Grid.Column="2" Text="数量" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
-          <TextBox Grid.Column="3"
-                   Text="{Binding ReinforcementCountText, UpdateSourceTrigger=PropertyChanged}"
-                   Padding="8,6"
-                   VerticalContentAlignment="Center" />
-          <TextBlock Grid.Column="4" Text="星级" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
-          <TextBox Grid.Column="5"
-                   Text="{Binding ReinforcementRankText, UpdateSourceTrigger=PropertyChanged}"
-                   Padding="8,6"
-                   VerticalContentAlignment="Center" />
-          <Button Grid.Column="6"
-                  Content="单位列表"
-                  Command="{Binding OpenReinforcementUnitPickerCommand}"
-                  Padding="12,7"
-                  Margin="12,0,0,0" />
-          <Button Grid.Column="7"
-                  Content="读取选中单位"
-                  Command="{Binding ReadSelectedUnitCodeCommand}"
-                  Padding="12,7"
-                  Margin="12,0,0,0" />
+          <Button Grid.Column="6" Content="一键启动并装载" Command="{Binding LaunchAndLoadCommand}"
+                  Style="{StaticResource PrimaryButtonStyle}" Padding="12,7" Margin="8,0,0,0" />
         </Grid>
       </Grid>
     </Border>
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
       <StackPanel Margin="16">
+        <Border Background="{StaticResource CardBackgroundBrush}" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="1" CornerRadius="6" Margin="0,0,0,14" Padding="14">
+          <StackPanel>
+            <TextBlock Text="基础资源" FontSize="16" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10" />
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <TextBlock Text="Money" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,8,0" />
+              <TextBox Grid.Column="1"
+                       Text="{Binding MoneyAmountText, UpdateSourceTrigger=PropertyChanged}"
+                       Padding="8,6"
+                       VerticalContentAlignment="Center" />
+              <TextBlock Grid.Column="2" Text="Power" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
+              <TextBox Grid.Column="3"
+                       Text="{Binding PowerValueText, UpdateSourceTrigger=PropertyChanged}"
+                       Padding="8,6"
+                       VerticalContentAlignment="Center" />
+              <TextBlock Grid.Column="4" Text="SC Point" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
+              <TextBox Grid.Column="5"
+                       Text="{Binding ScPointValueText, UpdateSourceTrigger=PropertyChanged}"
+                       Padding="8,6"
+                       VerticalContentAlignment="Center" />
+            </Grid>
+          </StackPanel>
+        </Border>
         <Border Background="{StaticResource CardBackgroundBrush}" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="1" CornerRadius="6" Margin="0,0,0,14" Padding="14">
           <StackPanel>
             <TextBlock Text="增援预设/队列" FontSize="16" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10" />
@@ -150,12 +127,44 @@
                         DisplayMemberPath="Name"
                         Padding="6,4"
                         VerticalContentAlignment="Center" />
-              <Button Grid.Column="4" Content="保存预设" Command="{Binding SaveReinforcementPresetCommand}" Padding="10,5" Margin="8,0,0,0" />
-              <Button Grid.Column="5" Content="应用预设" Command="{Binding ApplyReinforcementPresetCommand}" Padding="10,5" Margin="8,0,0,0" />
-              <Button Grid.Column="6" Content="预设入队" Command="{Binding AddSelectedPresetToQueueCommand}" Padding="10,5" Margin="8,0,0,0" />
-              <Button Grid.Column="7" Content="当前入队" Command="{Binding AddCurrentReinforcementToQueueCommand}" Padding="10,5" Margin="8,0,0,0" />
-              <Button Grid.Column="8" Content="执行队列" Command="{Binding ExecuteReinforcementQueueCommand}" Padding="10,5" Margin="8,0,0,0" />
-              <Button Grid.Column="9" Content="清空队列" Command="{Binding ClearReinforcementQueueCommand}" Padding="10,5" Margin="8,0,0,0" />
+              <Button Grid.Column="4" Content="保存预设" Command="{Binding SaveReinforcementPresetCommand}" Padding="10,5" Margin="12,0,0,0" />
+              <Button Grid.Column="5" Content="应用预设" Command="{Binding ApplyReinforcementPresetCommand}" Padding="10,5" Margin="12,0,0,0" />
+              <Button Grid.Column="6" Content="预设入队" Command="{Binding AddSelectedPresetToQueueCommand}" Padding="10,5" Margin="12,0,0,0" />
+              <Button Grid.Column="7" Content="当前入队" Command="{Binding AddCurrentReinforcementToQueueCommand}" Padding="10,5" Margin="12,0,0,0" />
+              <Button Grid.Column="8" Content="执行队列" Command="{Binding ExecuteReinforcementQueueCommand}"
+                      Style="{StaticResource PrimaryButtonStyle}" Padding="10,5" Margin="12,0,0,0" />
+              <Button Grid.Column="9" Content="清空队列" Command="{Binding ClearReinforcementQueueCommand}"
+                      Style="{StaticResource DangerButtonStyle}" Padding="10,5" Margin="12,0,0,0" />
+            </Grid>
+            <Grid Margin="0,0,0,10">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="72" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="72" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <TextBlock Text="增援单位ID" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,8,0" />
+              <TextBox Grid.Column="1"
+                       Text="{Binding ReinforcementUnitIdText, UpdateSourceTrigger=PropertyChanged}"
+                       Padding="8,6"
+                       VerticalContentAlignment="Center" />
+              <TextBlock Grid.Column="2" Text="数量" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
+              <TextBox Grid.Column="3"
+                       Text="{Binding ReinforcementCountText, UpdateSourceTrigger=PropertyChanged}"
+                       Padding="8,6"
+                       VerticalContentAlignment="Center" />
+              <TextBlock Grid.Column="4" Text="星级" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
+              <TextBox Grid.Column="5"
+                       Text="{Binding ReinforcementRankText, UpdateSourceTrigger=PropertyChanged}"
+                       Padding="8,6"
+                       VerticalContentAlignment="Center" />
+              <Button Grid.Column="6" Content="单位列表" Command="{Binding OpenReinforcementUnitPickerCommand}" Padding="12,7" Margin="12,0,0,0" />
+              <Button Grid.Column="7" Content="读取选中单位" Command="{Binding ReadSelectedUnitCodeCommand}" Padding="12,7" Margin="12,0,0,0" />
             </Grid>
             <ItemsControl ItemsSource="{Binding ReinforcementQueue}">
               <ItemsControl.ItemTemplate>
@@ -176,7 +185,8 @@
                     <TextBlock Grid.Column="3" Text="{Binding RankText}" VerticalAlignment="Center" Foreground="{StaticResource TextSecondaryBrush}" />
                     <TextBlock Grid.Column="4" Text="{Binding Status}" VerticalAlignment="Center" Foreground="{StaticResource TextTertiaryBrush}" />
                     <TextBlock Grid.Column="5" Text="{Binding Message}" VerticalAlignment="Center" Foreground="{StaticResource TextTertiaryBrush}" />
-                    <Button Grid.Column="6" Content="移除" Command="{Binding RemoveCommand}" Padding="8,4" />
+                    <Button Grid.Column="6" Content="移除" Command="{Binding RemoveCommand}"
+                            Style="{StaticResource DangerButtonStyle}" Padding="8,4" />
                   </Grid>
                 </DataTemplate>
               </ItemsControl.ItemTemplate>
@@ -200,11 +210,12 @@
                             <ColumnDefinition Width="Auto" />
                           </Grid.ColumnDefinitions>
                           <TextBlock Text="{Binding DisplayName}" VerticalAlignment="Center" Foreground="{StaticResource TextPrimaryBrush}" />
-                          <TextBlock Grid.Column="1" Text="{Binding Hotkey}" VerticalAlignment="Center" Foreground="{StaticResource TextTertiaryBrush}" />
+                          <TextBlock Grid.Column="1" Text="{Binding Hotkey}" VerticalAlignment="Center" Foreground="{StaticResource TextDisabledBrush}" />
                           <TextBlock Grid.Column="2" Text="{Binding Status}" VerticalAlignment="Center" Foreground="{StaticResource TextTertiaryBrush}" />
                           <Button Grid.Column="3"
                                   Content="{Binding ActionText}"
                                   Command="{Binding Command}"
+                                  Style="{StaticResource PrimaryButtonStyle}"
                                   Padding="10,5"
                                   MinWidth="88" />
                         </Grid>
