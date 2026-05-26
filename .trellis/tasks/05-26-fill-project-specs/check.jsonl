@@ -1,0 +1,3 @@
+{"file": ".trellis/spec/guides/index.md", "reason": "审查前必读：AI reviewer false-positive 模式、trust boundary 混淆、验证规则"}
+{"file": ".trellis/spec/guides/cross-layer-thinking-guide.md", "reason": "审查跨层代码时必须验证数据在各层间的转换是否一致"}
+{"file": ".trellis/spec/guides/code-reuse-thinking-guide.md", "reason": "审查时检查是否有可复用的现有模式，避免标记已知设计为问题"}
