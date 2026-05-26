@@ -71,3 +71,36 @@ Designed and implemented Catppuccin Mocha dark theme system for RA3 Trainer WPF 
 ### Next Steps
 
 - None - task complete
+
+
+## Session 3: UI polish: button layers, status feedback, layout restructure
+
+**Date**: 2026-05-26
+**Task**: UI polish: button layers, status feedback, layout restructure
+**Branch**: `main`
+
+### Summary
+
+Added button semantic hierarchy (Primary/Danger/Secondary) with DangerButtonStyle hover-red warning. Implemented ConnectionState enum with colored status dot (red/green/yellow) and FeatureItemViewModel.IsActive for green toggle feedback. Restructured top bar to connection-only module, extracted basic resources card, deepened input background contrast (Base vs Surface0), widened preset button spacing, and dimmed hotkey text. Created project's first IValueConverter (ConnectionStateToBrushConverter).
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `1cc0e50` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete

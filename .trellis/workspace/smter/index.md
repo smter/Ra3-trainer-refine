@@ -8,7 +8,7 @@
 
 <!-- @@@auto:current-status -->
 - **Active File**: `journal-1.md`
-- **Total Sessions**: 2
+- **Total Sessions**: 3
 - **Last Active**: 2026-05-26
 <!-- @@@/auto:current-status -->
 
@@ -19,7 +19,7 @@
 <!-- @@@auto:active-documents -->
 | File | Lines | Status |
 |------|-------|--------|
-| `journal-1.md` | ~73 | Active |
+| `journal-1.md` | ~106 | Active |
 <!-- @@@/auto:active-documents -->
 
 ---
@@ -29,6 +29,7 @@
 <!-- @@@auto:session-history -->
 | # | Date | Title | Commits | Branch |
 |---|------|-------|---------|--------|
+| 3 | 2026-05-26 | UI polish: button layers, status feedback, layout restructure | `1cc0e50` | `main` |
 | 2 | 2026-05-26 | UI modernization: Catppuccin Mocha dark theme | `a790d17` | `main` |
 | 1 | 2026-05-26 | 填充 Trellis 项目开发规范 (spec) — 从通用 Web 模板迁移到 .NET WPF 项目约定 | `30406c8` | `main` |
 <!-- @@@/auto:session-history -->
