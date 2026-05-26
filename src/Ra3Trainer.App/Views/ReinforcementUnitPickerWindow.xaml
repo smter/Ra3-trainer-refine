@@ -7,7 +7,8 @@
         MinHeight="480"
         MinWidth="620"
         WindowStartupLocation="CenterOwner"
-        Background="#F4F5F7">
+        Background="{StaticResource WindowBackgroundBrush}"
+        FontFamily="{StaticResource AppFont}">
   <DockPanel Margin="16">
     <StackPanel DockPanel.Dock="Top">
       <Grid Margin="0,0,0,10">
@@ -36,14 +37,14 @@
                 Command="{Binding CancelCommand}"
                 Padding="12,7" />
       </Grid>
-      <TextBlock Text="{Binding StatusMessage}" Foreground="#4B5563" Margin="0,0,0,4" />
+      <TextBlock Text="{Binding StatusMessage}" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,0,4" />
     </StackPanel>
 
     <ListView ItemsSource="{Binding FilteredUnits}"
               SelectedItem="{Binding SelectedUnit, Mode=TwoWay}"
-              BorderBrush="#D7DAE0"
+              BorderBrush="{StaticResource CardBorderBrush}"
               BorderThickness="1"
-              Background="White">
+              Background="{StaticResource CardBackgroundBrush}">
       <ListView.View>
         <GridView>
           <GridViewColumn Header="代码" Width="150" DisplayMemberBinding="{Binding CodeText}" />

@@ -15,14 +15,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="RA3 Trainer" Height="720" Width="1080"
-        MinHeight="560" MinWidth="860"
-        Background="#F4F5F7">
+        MinHeight="560" MinWidth="860">
   <DockPanel>
-    <!-- 顶部工具栏：固定深色背景 -->
-    <Border DockPanel.Dock="Top" Background="#1F2937" Padding="16">
+    <!-- 顶部工具栏：暗色背景 -->
+    <Border DockPanel.Dock="Top" Background="{StaticResource TopBarBackgroundBrush}" Padding="16">
       <StackPanel>
-        <TextBlock Text="RA3 Trainer" FontSize="22" FontWeight="SemiBold" />
-        <TextBlock Text="{Binding StatusMessage}" Foreground="#CBD5E1" />
+        <TextBlock Text="RA3 Trainer" FontSize="22" FontWeight="SemiBold"
+                   Foreground="{StaticResource TextPrimaryBrush}" />
+        <TextBlock Text="{Binding StatusMessage}"
+                   Foreground="{StaticResource TextSecondaryBrush}" />
       </StackPanel>
     </Border>
     <!-- 主体内容 -->
@@ -32,7 +33,7 @@
 
 **原则：**
 - 窗口尺寸设 `MinHeight`/`MinWidth` 防止布局压碎
-- 颜色使用工业级中性色（`#1F2937`、`#F4F5F7`）——不自定义主题
+- 颜色使用 Catppuccin Mocha 暗色主题，通过 `{StaticResource}` 引用语义化 token（参见 `Themes/` 目录）
 - `DockPanel` 作为顶层布局（顶部固定 + 主体滚动）
 
 ### Code-Behind 最小原则
@@ -146,4 +147,4 @@ public void OpenReinforcementUnitPicker()
 2. **禁止在 XAML 中硬编码数据。** 所有内容来自 Binding。
 3. **禁止 ViewModel 持有对 View 的引用。** VM 不知道（也不应该知道）自己由哪个 Window 承载。
 4. **禁止在 XAML DataTemplate 中嵌套复杂逻辑。** 用 `IValueConverter` 或 ViewModel 属性处理转换。
-5. **禁止使用 `DynamicResource` 做主题切换。** 项目固定浅色主题，不需要运行时换肤。
+5. **禁止使用 `DynamicResource` 做主题切换。** 项目使用 Catppuccin Mocha 暗色主题，颜色引用统一用 `StaticResource`。不引入 DynamicResource 做运行时换肤。

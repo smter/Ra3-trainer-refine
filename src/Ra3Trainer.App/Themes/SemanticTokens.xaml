@@ -1,0 +1,41 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="CatppuccinMocha.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Surface / Background -->
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{StaticResource Catppuccin.Base}" />
+    <SolidColorBrush x:Key="TopBarBackgroundBrush" Color="{StaticResource Catppuccin.Mantle}" />
+    <SolidColorBrush x:Key="CardBackgroundBrush" Color="{StaticResource Catppuccin.Surface0}" />
+    <SolidColorBrush x:Key="CardBorderBrush" Color="{StaticResource Catppuccin.Overlay0}" />
+    <SolidColorBrush x:Key="ElevatedSurfaceBrush" Color="{StaticResource Catppuccin.Surface1}" />
+    <SolidColorBrush x:Key="PressedSurfaceBrush" Color="{StaticResource Catppuccin.Surface2}" />
+
+    <!-- Text -->
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource Catppuccin.Text}" />
+    <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource Catppuccin.Subtext1}" />
+    <SolidColorBrush x:Key="TextTertiaryBrush" Color="{StaticResource Catppuccin.Subtext0}" />
+    <SolidColorBrush x:Key="TextDisabledBrush" Color="{StaticResource Catppuccin.Overlay2}" />
+
+    <!-- Accent -->
+    <SolidColorBrush x:Key="PrimaryAccentBrush" Color="{StaticResource Catppuccin.Mauve}" />
+    <SolidColorBrush x:Key="SecondaryAccentBrush" Color="{StaticResource Catppuccin.Lavender}" />
+    <SolidColorBrush x:Key="InfoAccentBrush" Color="{StaticResource Catppuccin.Blue}" />
+
+    <!-- Semantic State -->
+    <SolidColorBrush x:Key="SuccessBrush" Color="{StaticResource Catppuccin.Green}" />
+    <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource Catppuccin.Red}" />
+    <SolidColorBrush x:Key="WarningBrush" Color="{StaticResource Catppuccin.Peach}" />
+
+    <!-- Input -->
+    <SolidColorBrush x:Key="InputBackgroundBrush" Color="{StaticResource Catppuccin.Surface0}" />
+    <SolidColorBrush x:Key="InputBorderBrush" Color="{StaticResource Catppuccin.Overlay0}" />
+    <SolidColorBrush x:Key="InputFocusBorderBrush" Color="{StaticResource Catppuccin.Mauve}" />
+
+    <!-- Misc -->
+    <SolidColorBrush x:Key="SeparatorBrush" Color="{StaticResource Catppuccin.Overlay0}" />
+
+</ResourceDictionary>

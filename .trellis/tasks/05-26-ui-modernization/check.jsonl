@@ -1,0 +1,8 @@
+{"file": ".trellis/spec/app/quality-guidelines.md", "reason": "审查基准：XAML 属性顺序、Code-Behind ≤15 行、禁止模式检查、ViewModel 不引用 System.Windows"}
+{"file": ".trellis/spec/app/component-guidelines.md", "reason": "验证迁移后的 XAML：绑定模式正确、命令绑定未损坏、DataTemplate DataType 匹配、无 Click 事件处理器"}
+{"file": ".trellis/spec/app/catppuccin.md", "reason": "验证 Theme XAML 中 25 色值与参考一致，无拼写/色值错误"}
+{"file": ".trellis/spec/guides/index.md", "reason": "审查前必读：AI reviewer false-positive 模式（trust boundary 混淆、忽略设计注释）、验证规则"}
+{"file": ".trellis/spec/guides/cross-layer-thinking-guide.md", "reason": "验证 App→Core 跨层边界：ViewModel 属性 getter 不调用 Core 读取方法、异常仅在 Core 层捕获"}
+{"file": ".trellis/spec/guides/code-reuse-thinking-guide.md", "reason": "审查时检查 XAML 是否有可提取的重复模板/样式模式"}
+{"file": ".trellis/tasks/05-26-ui-modernization/prd.md", "reason": "验收标准核对：全部 3 个 XAML 无硬编码颜色、对比度 ≥4.5:1、功能无损"}
+{"file": ".trellis/tasks/05-26-ui-modernization/design.md", "reason": "设计合规审查：Semantic Token 映射正确、控件模板符合规格、StaticResource 非 DynamicResource"}

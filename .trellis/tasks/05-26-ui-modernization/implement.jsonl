@@ -1,0 +1,8 @@
+{"file": ".trellis/spec/app/index.md", "reason": "App 层规范索引：Views/ViewModels 目录结构、组件/状态/热键规范入口"}
+{"file": ".trellis/spec/app/component-guidelines.md", "reason": "WPF Window/XAML 绑定模式、DataTemplate 分组显示、禁止模式清单——实施迁移时必须遵守"}
+{"file": ".trellis/spec/app/state-management.md", "reason": "ViewModel 模式：ViewModelBase、RelayCommand、ObservableCollection——确保不改动 VM 层"}
+{"file": ".trellis/spec/app/catppuccin.md", "reason": "Catppuccin Mocha 25 色 Hex/RGB/HSL 完整数据——Theme XAML 颜色的唯一数据源"}
+{"file": ".trellis/spec/app/quality-guidelines.md", "reason": "XAML 规范：控件属性顺序、命名空间组织、Code-Behind 最小原则、禁止模式"}
+{"file": ".trellis/spec/core/index.md", "reason": "Core 层概述——了解不在修改范围内的层，避免误触跨层边界"}
+{"file": ".trellis/tasks/05-26-ui-modernization/prd.md", "reason": "需求与验收标准：5 项决策、控件重塑深度 B 级、卡片微边框风格"}
+{"file": ".trellis/tasks/05-26-ui-modernization/design.md", "reason": "技术设计：双层颜色体系 (Raw→Semantic) 映射表、控件模板规格、StaticResource 策略"}

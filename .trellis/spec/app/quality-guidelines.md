@@ -29,17 +29,26 @@
 4. 外观（`Padding`, `Margin`, `Foreground`, `Background`）
 5. 尺寸（`Width`, `Height`, `MinWidth`, `MinHeight`）
 
-### 避免内联样式
+### 主题颜色引用
+
+颜色通过 `{StaticResource}` 引用 Catppuccin Mocha 主题系统的语义化 token，不硬编码颜色值。
 
 ```xml
-<!-- ✅ 用固定颜色常量（工业级中性色） -->
+<!-- ✅ 用 StaticResource 引用主题 token -->
+Background="{StaticResource TopBarBackgroundBrush}"
+Foreground="{StaticResource TextPrimaryBrush}"
+
+<!-- ❌ 不硬编码颜色值 -->
 Background="#1F2937"
 Foreground="#CBD5E1"
-
-<!-- ❌ 不引入 Style 资源字典——项目规模不需要 -->
 ```
 
-**原则：** 颜色直接写 XAML 属性值。不创建 Style/ResourceDictionary——项目有 1 个窗口，不需要主题系统。
+**主题文件位置：** `src/Ra3Trainer.App/Themes/`
+- `CatppuccinMocha.xaml` — 25 色原始色板
+- `SemanticTokens.xaml` — 语义化 Brush 映射
+- `GlobalStyles.xaml` — 隐式控件 Style
+
+**原则：** 颜色通过 StaticResource 引用主题 token。不使用 DynamicResource（项目不做运行时换肤）。新增颜色先在 Themes/ 中定义 token，再在 XAML 中引用。
 
 ---
 

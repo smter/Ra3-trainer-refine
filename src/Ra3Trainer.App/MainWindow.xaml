@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="RA3 Trainer" Height="720" Width="1080"
         MinHeight="560" MinWidth="860"
-        Background="#F4F5F7">
+        Background="{StaticResource WindowBackgroundBrush}"
+        FontFamily="{StaticResource AppFont}">
   <DockPanel>
-    <Border DockPanel.Dock="Top" Background="#1F2937" Padding="16">
+    <Border DockPanel.Dock="Top" Background="{StaticResource TopBarBackgroundBrush}" Padding="16">
       <Grid>
         <Grid.RowDefinitions>
           <RowDefinition Height="Auto" />
@@ -18,8 +19,8 @@
           <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <StackPanel>
-          <TextBlock Text="RA3 Trainer" Foreground="White" FontSize="22" FontWeight="SemiBold" />
-          <TextBlock Text="{Binding StatusMessage}" Foreground="#CBD5E1" Margin="0,4,0,0" />
+          <TextBlock Text="RA3 Trainer" Foreground="{StaticResource TextPrimaryBrush}" FontSize="22" FontWeight="SemiBold" />
+          <TextBlock Text="{Binding StatusMessage}" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,4,0,0" />
         </StackPanel>
         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
           <Button Content="重新检测进程" Command="{Binding RefreshCommand}" Padding="12,8" Margin="0,0,8,0" />
@@ -36,13 +37,13 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
           </Grid.ColumnDefinitions>
-          <TextBlock Text="RA3.exe" Foreground="#CBD5E1" VerticalAlignment="Center" Margin="0,0,8,0" />
+          <TextBlock Text="RA3.exe" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,8,0" />
           <TextBox Grid.Column="1"
                    Text="{Binding LauncherPath, UpdateSourceTrigger=PropertyChanged}"
                    MinWidth="320"
                    Padding="8,6"
                    VerticalContentAlignment="Center" />
-          <TextBlock Grid.Column="2" Text="参数" Foreground="#CBD5E1" VerticalAlignment="Center" Margin="12,0,8,0" />
+          <TextBlock Grid.Column="2" Text="参数" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
           <TextBox Grid.Column="3"
                    Text="{Binding LauncherArguments, UpdateSourceTrigger=PropertyChanged}"
                    Padding="8,6"
@@ -61,17 +62,17 @@
             <ColumnDefinition Width="80" />
             <ColumnDefinition Width="*" />
           </Grid.ColumnDefinitions>
-          <TextBlock Text="Money" Foreground="#CBD5E1" VerticalAlignment="Center" Margin="0,0,8,0" />
+          <TextBlock Text="Money" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,8,0" />
           <TextBox Grid.Column="1"
                    Text="{Binding MoneyAmountText, UpdateSourceTrigger=PropertyChanged}"
                    Padding="8,6"
                    VerticalContentAlignment="Center" />
-          <TextBlock Grid.Column="2" Text="Power" Foreground="#CBD5E1" VerticalAlignment="Center" Margin="12,0,8,0" />
+          <TextBlock Grid.Column="2" Text="Power" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
           <TextBox Grid.Column="3"
                    Text="{Binding PowerValueText, UpdateSourceTrigger=PropertyChanged}"
                    Padding="8,6"
                    VerticalContentAlignment="Center" />
-          <TextBlock Grid.Column="4" Text="SC Point" Foreground="#CBD5E1" VerticalAlignment="Center" Margin="12,0,8,0" />
+          <TextBlock Grid.Column="4" Text="SC Point" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
           <TextBox Grid.Column="5"
                    Text="{Binding ScPointValueText, UpdateSourceTrigger=PropertyChanged}"
                    Padding="8,6"
@@ -89,17 +90,17 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
           </Grid.ColumnDefinitions>
-          <TextBlock Text="增援单位ID" Foreground="#CBD5E1" VerticalAlignment="Center" Margin="0,0,8,0" />
+          <TextBlock Text="增援单位ID" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,8,0" />
           <TextBox Grid.Column="1"
                    Text="{Binding ReinforcementUnitIdText, UpdateSourceTrigger=PropertyChanged}"
                    Padding="8,6"
                    VerticalContentAlignment="Center" />
-          <TextBlock Grid.Column="2" Text="数量" Foreground="#CBD5E1" VerticalAlignment="Center" Margin="12,0,8,0" />
+          <TextBlock Grid.Column="2" Text="数量" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
           <TextBox Grid.Column="3"
                    Text="{Binding ReinforcementCountText, UpdateSourceTrigger=PropertyChanged}"
                    Padding="8,6"
                    VerticalContentAlignment="Center" />
-          <TextBlock Grid.Column="4" Text="星级" Foreground="#CBD5E1" VerticalAlignment="Center" Margin="12,0,8,0" />
+          <TextBlock Grid.Column="4" Text="星级" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="12,0,8,0" />
           <TextBox Grid.Column="5"
                    Text="{Binding ReinforcementRankText, UpdateSourceTrigger=PropertyChanged}"
                    Padding="8,6"
@@ -120,9 +121,9 @@
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
       <StackPanel Margin="16">
-        <Border Background="White" BorderBrush="#D7DAE0" BorderThickness="1" CornerRadius="6" Margin="0,0,0,14" Padding="14">
+        <Border Background="{StaticResource CardBackgroundBrush}" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="1" CornerRadius="6" Margin="0,0,0,14" Padding="14">
           <StackPanel>
-            <TextBlock Text="增援预设/队列" FontSize="16" FontWeight="SemiBold" Foreground="#111827" Margin="0,0,0,10" />
+            <TextBlock Text="增援预设/队列" FontSize="16" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10" />
             <Grid Margin="0,0,0,10">
               <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -137,12 +138,12 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
               </Grid.ColumnDefinitions>
-              <TextBlock Text="预设名" VerticalAlignment="Center" Foreground="#4B5563" Margin="0,0,8,0" />
+              <TextBlock Text="预设名" VerticalAlignment="Center" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,8,0" />
               <TextBox Grid.Column="1"
                        Text="{Binding PresetNameText, UpdateSourceTrigger=PropertyChanged}"
                        Padding="8,6"
                        VerticalContentAlignment="Center" />
-              <TextBlock Grid.Column="2" Text="预设" VerticalAlignment="Center" Foreground="#4B5563" Margin="12,0,8,0" />
+              <TextBlock Grid.Column="2" Text="预设" VerticalAlignment="Center" Foreground="{StaticResource TextSecondaryBrush}" Margin="12,0,8,0" />
               <ComboBox Grid.Column="3"
                         ItemsSource="{Binding ReinforcementPresets}"
                         SelectedItem="{Binding SelectedReinforcementPreset}"
@@ -169,12 +170,12 @@
                       <ColumnDefinition Width="*" />
                       <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Foreground="#1F2937" />
-                    <TextBlock Grid.Column="1" Text="{Binding UnitIdText}" VerticalAlignment="Center" Foreground="#4B5563" />
-                    <TextBlock Grid.Column="2" Text="{Binding CountText}" VerticalAlignment="Center" Foreground="#4B5563" />
-                    <TextBlock Grid.Column="3" Text="{Binding RankText}" VerticalAlignment="Center" Foreground="#4B5563" />
-                    <TextBlock Grid.Column="4" Text="{Binding Status}" VerticalAlignment="Center" Foreground="#6B7280" />
-                    <TextBlock Grid.Column="5" Text="{Binding Message}" VerticalAlignment="Center" Foreground="#6B7280" />
+                    <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Foreground="{StaticResource TextPrimaryBrush}" />
+                    <TextBlock Grid.Column="1" Text="{Binding UnitIdText}" VerticalAlignment="Center" Foreground="{StaticResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="2" Text="{Binding CountText}" VerticalAlignment="Center" Foreground="{StaticResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="3" Text="{Binding RankText}" VerticalAlignment="Center" Foreground="{StaticResource TextSecondaryBrush}" />
+                    <TextBlock Grid.Column="4" Text="{Binding Status}" VerticalAlignment="Center" Foreground="{StaticResource TextTertiaryBrush}" />
+                    <TextBlock Grid.Column="5" Text="{Binding Message}" VerticalAlignment="Center" Foreground="{StaticResource TextTertiaryBrush}" />
                     <Button Grid.Column="6" Content="移除" Command="{Binding RemoveCommand}" Padding="8,4" />
                   </Grid>
                 </DataTemplate>
@@ -185,9 +186,9 @@
         <ItemsControl ItemsSource="{Binding Groups}">
           <ItemsControl.ItemTemplate>
             <DataTemplate>
-              <Border Background="White" BorderBrush="#D7DAE0" BorderThickness="1" CornerRadius="6" Margin="0,0,0,14" Padding="14">
+              <Border Background="{StaticResource CardBackgroundBrush}" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="1" CornerRadius="6" Margin="0,0,0,14" Padding="14">
                 <StackPanel>
-                  <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="SemiBold" Foreground="#111827" Margin="0,0,0,10" />
+                  <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,10" />
                   <ItemsControl ItemsSource="{Binding Features}">
                     <ItemsControl.ItemTemplate>
                       <DataTemplate>
@@ -198,9 +199,9 @@
                             <ColumnDefinition Width="160" />
                             <ColumnDefinition Width="Auto" />
                           </Grid.ColumnDefinitions>
-                          <TextBlock Text="{Binding DisplayName}" VerticalAlignment="Center" Foreground="#1F2937" />
-                          <TextBlock Grid.Column="1" Text="{Binding Hotkey}" VerticalAlignment="Center" Foreground="#6B7280" />
-                          <TextBlock Grid.Column="2" Text="{Binding Status}" VerticalAlignment="Center" Foreground="#6B7280" />
+                          <TextBlock Text="{Binding DisplayName}" VerticalAlignment="Center" Foreground="{StaticResource TextPrimaryBrush}" />
+                          <TextBlock Grid.Column="1" Text="{Binding Hotkey}" VerticalAlignment="Center" Foreground="{StaticResource TextTertiaryBrush}" />
+                          <TextBlock Grid.Column="2" Text="{Binding Status}" VerticalAlignment="Center" Foreground="{StaticResource TextTertiaryBrush}" />
                           <Button Grid.Column="3"
                                   Content="{Binding ActionText}"
                                   Command="{Binding Command}"
