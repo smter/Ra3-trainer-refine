@@ -11,3 +11,11 @@
 *.pyc
 /.pytest_cache/
 /*.png
+
+.codex
+.claude
+.opencode
+.agents
+.agent
+.trellis/scripts
+.trellis/.*
